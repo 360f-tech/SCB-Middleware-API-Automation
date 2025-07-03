@@ -823,6 +823,513 @@
       " purchase notification for travel "
     ]
   },
+  "src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json": {
+    "tests": {
+      "Get Quote for Cyber": {
+        "name": "Get Quote for Cyber",
+        "responseData": {
+          "statusCode": 200
+        },
+        "requestData": {
+          "Body": {
+            "name": "Get Quote for Cyber",
+            "method": "POST",
+            "endpoint": "/360-scb/api/v1/quote",
+            "request": {
+              "body": {
+                "policyEffectiveDate": "2025-07-09",
+                "selectedPackageId": "P001",
+                "productCode": "ALZ-HK-CYB-v001",
+                "product": {
+                  "ID": "IA02",
+                  "name": "Cyber Insurance",
+                  "category": "Cyber",
+                  "promoCode": "",
+                  "referralCode": "",
+                  "userSpecificDiscountFlag": "False"
+                },
+                "insuranceCompanyCode": "MSIG",
+                "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+                "policyHolders": [
+                  {
+                    "policyHolderId": 1,
+                    "personalDetails": {
+                      "preferredContactMethod": "email",
+                      "lastName": "Graeme",
+                      "gender": "M",
+                      "mobile": "99882233",
+                      "nationalIdType": "NRIC",
+                      "occupation": "Engineer",
+                      "nationalID": "S1234567a",
+                      "isSmoker": false,
+                      "residentialAddress": {
+                        "countryCode": "DE",
+                        "addressLine1": "Blk 123 Street Name",
+                        "addressLine2": "Building 5",
+                        "city": "Singapore",
+                        "addressLine3": "Unit 09-88",
+                        "area": "Kowloon",
+                        "district": "North district",
+                        "country": "Singapore",
+                        "postalCode": "123456"
+                      },
+                      "isAdult": true,
+                      "dob": "1993-11-01",
+                      "title": "MR",
+                      "firstName": "Alex",
+                      "nationality": "SG",
+                      "email": "alex@gmail.com",
+                      "age": 31
+                    }
+                  }
+                ],
+                "timestamp": "2025/06/18T14:02:12.104Z",
+                "quotationDetails": {
+                  "planType": "Basic",
+                  "deductible": "",
+                  "preferences": {
+                    "currency": "HKD",
+                    "language": "EN"
+                  },
+                  "paymentMethod": "credit Card",
+                  "policyContent": "",
+                  "insuredPersons": [],
+                  "insuredEntities": {
+                    "cyber": {}
+                  }
+                },
+                "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+                "consents": [
+                  {
+                    "consentType": "Advertisement with message",
+                    "hasAccepted": "True"
+                  }
+                ],
+                "quoteRequestReferenceNo": ""
+              }
+            },
+            "response": {
+              "validator": {
+                "body_validator": {}
+              },
+              "statusCode": 200
+            }
+          }
+        },
+        "status": "passed"
+      },
+      "Purchase notificaton for Cyber": {
+        "name": "Purchase notificaton for Cyber",
+        "responseData": {
+          "statusCode": 200
+        },
+        "requestData": {
+          "Body": {
+            "name": "Purchase notificaton for Cyber",
+            "method": "POST",
+            "endpoint": "/360-scb/api/v1/purchase-notification",
+            "request": {
+              "body": {
+                "productCode": "ALZ-HK-CYB-v001",
+                "channel": "IBNK",
+                "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+                "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+                "pnRequestReferenceNo": "",
+                "quoteRequestReferenceNo": "",
+                "timestamp": "2025-03-05T06:28:25.414Z",
+                "insuranceCompanyCode": "ALZHK",
+                "policyHolders": [
+                  {
+                    "policyHolderId": 1,
+                    "personalDetails": {
+                      "title": "MR",
+                      "firstName": "Peter",
+                      "lastName": "Graeme",
+                      "isSmoker": false,
+                      "gender": "M",
+                      "isAdult": true,
+                      "age": 51,
+                      "dob": "1973-11-01",
+                      "occupation": "Engineer",
+                      "nationality": "SG",
+                      "nationalIdType": "NRIC",
+                      "nationalID": "S1234567A",
+                      "email": "alex@gmail.com",
+                      "mobile": "99882233",
+                      "preferredContactMethod": "email",
+                      "residentialAddress": {
+                        "addressLine1": "Blk 123 Street Name",
+                        "addressLine2": "Building 5",
+                        "addressLine3": "Unit 09-88",
+                        "district": "North district",
+                        "area": "Kowloon",
+                        "city": "Singapore",
+                        "postalCode": "123456",
+                        "country": "Singapore",
+                        "countryCode": "SG"
+                      }
+                    }
+                  }
+                ],
+                "preferences": {
+                  "currency": "HKD",
+                  "language": "en"
+                },
+                "insuredEntities": {},
+                "quotationDetails": {
+                  "selectedPackageId": "P001",
+                  "issueDate": "2025-01-07",
+                  "effectiveDate": "2025-07-25",
+                  "quotationReferenceNo": "",
+                  "expiryDate": "2025-01-25",
+                  "planType": "Basic",
+                  "insuredPersons": [
+                    {
+                      "insuredPersonsId": 1,
+                      "personalDetails": {
+                        "title": "MR",
+                        "firstName": "Alex",
+                        "lastName": "Graeme",
+                        "nationality": "SG",
+                        "email": "alex@gmail.com",
+                        "age": 29,
+                        "occupation": "Engineer",
+                        "mobileNumber": 99882233,
+                        "nationalID": "S1234567A",
+                        "preferredContactMethod": "email",
+                        "gender": "M",
+                        "dob": "1993-11-01",
+                        "residentialAddress": {
+                          "addressLine1": "Blk 123 Street Name",
+                          "addressLine2": "Building 5",
+                          "addressLine3": "Unit 09-88",
+                          "area": "",
+                          "district": "",
+                          "city": "Singapore",
+                          "postalCode": "123456",
+                          "countryCode": "SG",
+                          "country": "Singapore"
+                        }
+                      },
+                      "isMainPolicyHolder": "false",
+                      "otherBenefits": [
+                        {
+                          "isSelected": "true",
+                          "name": "Accelerated Disability",
+                          "groupName": "",
+                          "isInbuilt": "true",
+                          "id": "RDR001",
+                          "description": "Provides disability coverage",
+                          "information": "",
+                          "sequenceId": "01",
+                          "coverageLimit": 0,
+                          "premium": {
+                            "monthlyPremium": 0,
+                            "annualPremium": 0
+                          }
+                        }
+                      ],
+                      "coverageExclusions": [
+                        {
+                          "description": "Inclusion of Flight Aversion Charges",
+                          "type": "Fligh Aversion"
+                        }
+                      ],
+                      "waitingPeriod": 90
+                    }
+                  ],
+                  "premiumDetails": {
+                    "loading": 0,
+                    "premiumPayable": 6000.5,
+                    "totalRiderPremium": 0,
+                    "totalPremiumBeforeDiscount": 6000.5,
+                    "grossPremium": 6000.5,
+                    "basePremium": 6020,
+                    "totalPremiumAfterDiscount": 6000.5,
+                    "tax": 0,
+                    "basePremiumAfterFee": 6000.5,
+                    "discount": 0,
+                    "policyFee": 0.5
+                  }
+                },
+                "payment": {
+                  "method": "CASA",
+                  "frequency": "Monthly",
+                  "amount": 120,
+                  "status": "SUCCESS",
+                  "dateTime": "2025‑03‑05T06:28:25.414Z",
+                  "externalReferenceNumber": "SGSCHHOME202504111204356",
+                  "ddlMandateNumber": "EI9496202504119693",
+                  "externalTokenNumber": "ABC55566",
+                  "paymentSessionId": "ABC55566",
+                  "bankAccount": {},
+                  "channel": "ibanking"
+                },
+                "additionalInfo": {
+                  "email": "ashwin@gmail.com",
+                  "mobileNo": 57865475
+                }
+              }
+            },
+            "response": {
+              "validator": {
+                "body_validator": {}
+              },
+              "statusCode": 200
+            }
+          }
+        },
+        "status": "passed"
+      }
+    },
+    "data": {
+      "name": "Cyber E2E",
+      "Test": [
+        {
+          "Name": "Get Quote for Cyber",
+          "Method": "POST",
+          "Endpoint": "/360-scb/api/v1/quote",
+          "Request": {
+            "body": {
+              "policyEffectiveDate": "2025-07-09",
+              "selectedPackageId": "P001",
+              "productCode": "ALZ-HK-CYB-v001",
+              "product": {
+                "ID": "IA02",
+                "name": "Cyber Insurance",
+                "category": "Cyber",
+                "promoCode": "",
+                "referralCode": "",
+                "userSpecificDiscountFlag": "False"
+              },
+              "insuranceCompanyCode": "MSIG",
+              "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+              "policyHolders": [
+                {
+                  "policyHolderId": 1.0,
+                  "personalDetails": {
+                    "preferredContactMethod": "email",
+                    "lastName": "Graeme",
+                    "gender": "M",
+                    "mobile": "99882233",
+                    "nationalIdType": "NRIC",
+                    "occupation": "Engineer",
+                    "nationalID": "S1234567a",
+                    "isSmoker": false,
+                    "residentialAddress": {
+                      "countryCode": "DE",
+                      "addressLine1": "Blk 123 Street Name",
+                      "addressLine2": "Building 5",
+                      "city": "Singapore",
+                      "addressLine3": "Unit 09-88",
+                      "area": "Kowloon",
+                      "district": "North district",
+                      "country": "Singapore",
+                      "postalCode": "123456"
+                    },
+                    "isAdult": true,
+                    "dob": "1993-11-01",
+                    "title": "MR",
+                    "firstName": "Alex",
+                    "nationality": "SG",
+                    "email": "alex@gmail.com",
+                    "age": 31.0
+                  }
+                }
+              ],
+              "timestamp": "2025/06/18T14:02:12.104Z",
+              "quotationDetails": {
+                "planType": "Basic",
+                "deductible": "",
+                "preferences": {
+                  "currency": "HKD",
+                  "language": "EN"
+                },
+                "paymentMethod": "credit Card",
+                "policyContent": "",
+                "insuredPersons": [],
+                "insuredEntities": {
+                  "cyber": {}
+                }
+              },
+              "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+              "consents": [
+                {
+                  "consentType": "Advertisement with message",
+                  "hasAccepted": "True"
+                }
+              ],
+              "quoteRequestReferenceNo": ""
+            }
+          },
+          "Response": {
+            "statusCode": 200.0,
+            "validator": {
+              "body_validator": {}
+            }
+          }
+        },
+        {
+          "Name": "Purchase notificaton for Cyber",
+          "Method": "POST",
+          "Endpoint": "/360-scb/api/v1/purchase-notification",
+          "Request": {
+            "body": {
+              "productCode": "ALZ-HK-CYB-v001",
+              "channel": "IBNK",
+              "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+              "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+              "pnRequestReferenceNo": "",
+              "quoteRequestReferenceNo": "",
+              "timestamp": "2025-03-05T06:28:25.414Z",
+              "insuranceCompanyCode": "ALZHK",
+              "policyHolders": [
+                {
+                  "policyHolderId": 1.0,
+                  "personalDetails": {
+                    "title": "MR",
+                    "firstName": "Peter",
+                    "lastName": "Graeme",
+                    "isSmoker": false,
+                    "gender": "M",
+                    "isAdult": true,
+                    "age": 51.0,
+                    "dob": "1973-11-01",
+                    "occupation": "Engineer",
+                    "nationality": "SG",
+                    "nationalIdType": "NRIC",
+                    "nationalID": "S1234567A",
+                    "email": "alex@gmail.com",
+                    "mobile": "99882233",
+                    "preferredContactMethod": "email",
+                    "residentialAddress": {
+                      "addressLine1": "Blk 123 Street Name",
+                      "addressLine2": "Building 5",
+                      "addressLine3": "Unit 09-88",
+                      "district": "North district",
+                      "area": "Kowloon",
+                      "city": "Singapore",
+                      "postalCode": "123456",
+                      "country": "Singapore",
+                      "countryCode": "SG"
+                    }
+                  }
+                }
+              ],
+              "preferences": {
+                "currency": "HKD",
+                "language": "en"
+              },
+              "insuredEntities": {},
+              "quotationDetails": {
+                "selectedPackageId": "P001",
+                "issueDate": "2025-01-07",
+                "effectiveDate": "2025-07-25",
+                "quotationReferenceNo": "",
+                "expiryDate": "2025-01-25",
+                "planType": "Basic",
+                "insuredPersons": [
+                  {
+                    "insuredPersonsId": 1.0,
+                    "personalDetails": {
+                      "title": "MR",
+                      "firstName": "Alex",
+                      "lastName": "Graeme",
+                      "nationality": "SG",
+                      "email": "alex@gmail.com",
+                      "age": 29.0,
+                      "occupation": "Engineer",
+                      "mobileNumber": 9.9882233E7,
+                      "nationalID": "S1234567A",
+                      "preferredContactMethod": "email",
+                      "gender": "M",
+                      "dob": "1993-11-01",
+                      "residentialAddress": {
+                        "addressLine1": "Blk 123 Street Name",
+                        "addressLine2": "Building 5",
+                        "addressLine3": "Unit 09-88",
+                        "area": "",
+                        "district": "",
+                        "city": "Singapore",
+                        "postalCode": "123456",
+                        "countryCode": "SG",
+                        "country": "Singapore"
+                      }
+                    },
+                    "isMainPolicyHolder": "false",
+                    "otherBenefits": [
+                      {
+                        "isSelected": "true",
+                        "name": "Accelerated Disability",
+                        "groupName": "",
+                        "isInbuilt": "true",
+                        "id": "RDR001",
+                        "description": "Provides disability coverage",
+                        "information": "",
+                        "sequenceId": "01",
+                        "coverageLimit": 0.0,
+                        "premium": {
+                          "monthlyPremium": 0.0,
+                          "annualPremium": 0.0
+                        }
+                      }
+                    ],
+                    "coverageExclusions": [
+                      {
+                        "description": "Inclusion of Flight Aversion Charges",
+                        "type": "Fligh Aversion"
+                      }
+                    ],
+                    "waitingPeriod": 90.0
+                  }
+                ],
+                "premiumDetails": {
+                  "loading": 0.0,
+                  "premiumPayable": 6000.5,
+                  "totalRiderPremium": 0.0,
+                  "totalPremiumBeforeDiscount": 6000.5,
+                  "grossPremium": 6000.5,
+                  "basePremium": 6020.0,
+                  "totalPremiumAfterDiscount": 6000.5,
+                  "tax": 0.0,
+                  "basePremiumAfterFee": 6000.5,
+                  "discount": 0.0,
+                  "policyFee": 0.5
+                }
+              },
+              "payment": {
+                "method": "CASA",
+                "frequency": "Monthly",
+                "amount": 120.0,
+                "status": "SUCCESS",
+                "dateTime": "2025‑03‑05T06:28:25.414Z",
+                "externalReferenceNumber": "SGSCHHOME202504111204356",
+                "ddlMandateNumber": "EI9496202504119693",
+                "externalTokenNumber": "ABC55566",
+                "paymentSessionId": "ABC55566",
+                "bankAccount": {},
+                "channel": "ibanking"
+              },
+              "additionalInfo": {
+                "email": "ashwin@gmail.com",
+                "mobileNo": 5.7865475E7
+              }
+            }
+          },
+          "Response": {
+            "statusCode": 200.0,
+            "validator": {
+              "body_validator": {}
+            }
+          }
+        }
+      ]
+    },
+    "nameList": [
+      "Get Quote for Cyber",
+      "Purchase notificaton for Cyber"
+    ]
+  },
   "src/test/java/org/example/TestCases/360F-auth.json": {
     "tests": {
       "Get Token": {
@@ -889,9 +1396,7 @@
       "Purchase Notification for Home": {
         "name": "Purchase Notification for Home",
         "responseData": {
-          "stackTrace": "java.lang.AssertionError: Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:24)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:44)\r\n\tat org.example.SCD_E2E.runTest(SCD_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
-          "error": "Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e",
-          "statusCode": 400
+          "statusCode": 200
         },
         "requestData": {
           "Body": {
@@ -1074,7 +1579,7 @@
                 "pnRequestReferenceNo": "PTW0724498090",
                 "productCode": "ALZ-HK-HOM-v001",
                 "promoCode": "",
-                "iPolId": 249659
+                "iPolId": "250305"
               }
             },
             "response": {
@@ -1085,7 +1590,7 @@
             }
           }
         },
-        "status": "failed"
+        "status": "passed"
       },
       "Get Quote for Home": {
         "name": "Get Quote for Home",
@@ -1140,14 +1645,14 @@
         },
         "status": "passed"
       },
-      "Secound Get Quote for Home ": {
-        "name": "Secound Get Quote for Home ",
+      "Secound Get Quote for Home": {
+        "name": "Secound Get Quote for Home",
         "responseData": {
           "statusCode": 200
         },
         "requestData": {
           "Body": {
-            "name": "Secound Get Quote for Home ",
+            "name": "Secound Get Quote for Home",
             "method": "POST",
             "endpoint": "/360-scb/api/v1/quote",
             "request": {
@@ -1158,7 +1663,7 @@
                 "policyEffectiveDate": "2025-08-27",
                 "selectedPackageId": "P001",
                 "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-                "quoteRequestReferenceNo": "",
+                "quoteRequestReferenceNo": "P001",
                 "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
                 "timestamp": "2025-06-08T00:00:00.000Z",
                 "product": {
@@ -1399,7 +1904,7 @@
           }
         },
         {
-          "Name": "Secound Get Quote for Home ",
+          "Name": "Secound Get Quote for Home",
           "Method": "POST",
           "Endpoint": "/360-scb/api/v1/quote",
           "Request": {
@@ -1410,7 +1915,7 @@
               "policyEffectiveDate": "2025-08-27",
               "selectedPackageId": "P001",
               "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-              "quoteRequestReferenceNo": "",
+              "quoteRequestReferenceNo": "P001",
               "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
               "timestamp": "2025-06-08T00:00:00.000Z",
               "product": {
@@ -1779,7 +2284,7 @@
               "pnRequestReferenceNo": "PTW0724498090",
               "productCode": "ALZ-HK-HOM-v001",
               "promoCode": "",
-              "iPolId": 249659.0
+              "iPolId": "${iPolId}"
             }
           },
           "Response": {
@@ -1793,7 +2298,7 @@
     },
     "nameList": [
       "Get Quote for Home",
-      "Secound Get Quote for Home ",
+      "Secound Get Quote for Home",
       "Purchase Notification for Home"
     ]
   }

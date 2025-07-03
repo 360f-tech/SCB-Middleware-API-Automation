@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class SCD_E2E {
+public class SCB_E2E {
 
     @Parameters({"testData"})
     @Test(dataProvider = "ApiTestData", dataProviderClass = DataProviders.class )

@@ -95,7 +95,7 @@
     },
 
     {
-      "Name": "Secound Get Quote for Home ",
+      "Name": "Secound Get Quote for Home",
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
@@ -106,7 +106,7 @@
           "policyEffectiveDate": "2025-08-27",
           "selectedPackageId": "P001",
           "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-          "quoteRequestReferenceNo": "",
+          "quoteRequestReferenceNo": "P001",
           "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
           "timestamp": "2025-06-08T00:00:00.000Z",
           "product": {
@@ -483,7 +483,7 @@
           "pnRequestReferenceNo": "PTW0724498090",
           "productCode": "ALZ-HK-HOM-v001",
           "promoCode": "",
-          "iPolId": 249659
+          "iPolId":"${iPolId}"
         }
       },
       "Response": {

@@ -14,7 +14,6 @@ public class DataProviders {
     @DataProvider(name = "ApiTestData")
     public static Object[][] getApiTestData(ITestContext context) throws IOException {
         String filePath = context.getCurrentXmlTest().getParameter("testData");
-        System.out.println("filePath is "+filePath);
         Path path = Utilities.copyFileContent(filePath);
         APITest  apiTest = Utilities.readjsonFile(path);
         Object[][] testData = new Object[apiTest.getTest().size()][1];
