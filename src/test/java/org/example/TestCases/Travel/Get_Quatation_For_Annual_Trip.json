@@ -1,0 +1,23 @@
+{
+  "name": "360F- get quote - Travel",
+  "Test": [
+    {
+      "Name": "Valid quotation for Annual trip",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+
+        }
+      },
+      "Response": {
+        "validator": {
+          "body_validator": {
+            "token_type": "equalTo(Bearer)"
+          }
+        }
+      }
+
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "360F-auth",
+  "Test": [
+    {
+      "Name": "Get Token",
+      "Method": "POST",
+      "Endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
+      "Request": {
+        "body": {
+          "client_id": "scbbanca@2025",
+          "client_secret": "Scb_2025$Msl05World",
+          "grant_type": "client_credentials"
+        }
+      },
+        "Response": {
+          "statusCode": 200,
+          "validator": {
+            "body_validator": {
+              "token_type": "equalTo(Bearer)"
+            }
+          }
+        }
+
+    }
+  ]
+}
