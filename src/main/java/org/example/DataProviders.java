@@ -18,7 +18,6 @@ public class DataProviders {
         APITest  apiTest = Utilities.readjsonFile(path);
         Object[][] testData = new Object[apiTest.getTest().size()][1];
         for (int i = 0; i < apiTest.getTest().size(); i++) {
-
             Utilities.readjsonFile(path);
             testData[i][0] = apiTest.getTest().get(i);
         }

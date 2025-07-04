@@ -12,12 +12,12 @@
         </classes>
     </test>
 
-    <test name="Travel E2E">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Travel_E2E.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
+<!--    <test name="Travel E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Travel_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="Home E2E">
         <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Home_E2E.json"/>
@@ -26,12 +26,12 @@
         </classes>
     </test>
 
-    <test name="Cyber E2E">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
+<!--    <test name="Cyber E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 

@@ -394,6 +394,7 @@
         "validator": {
           "body_validator": {
             "data.policyStatus": "equalTo(\"Success\")"
+
           }
         }
       }
