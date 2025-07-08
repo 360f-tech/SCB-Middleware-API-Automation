@@ -1,0 +1,500 @@
+{
+  "name": "Home E2E",
+  "Test": [
+    {
+      "Name": "Get Quote for Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": null,
+                "hasLoan": null,
+                "buildingAge": 0,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+        "Response": {
+          "statusCode": 200,
+          "validator": {
+            "body_validator": {
+
+            }
+          }
+        }
+
+    },
+
+    {
+      "Name": "Secound Get Quote for Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-HOM-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "P001",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "P001",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVSG",
+            "name": "Home Insurance",
+            "category": "Home",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo":
+                {
+                  "endDate": "2025-10-30",
+                  "tripType": "Single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Purchase Notification for Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "2429856470"
+            },
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-06-09T11:58:12.104Z",
+            "frequency": "Annual"
+          },
+          "insuredEntities": {
+            "property": {
+              "bank": {
+                "bankName": "ICICI",
+                "bankBranch": "xxxxxx",
+                "accountNumber": "xxxxxxxxxxx"
+              },
+              "hasLoan": true,
+              "carpetArea": "1000",
+              "buildingAge": 5,
+              "propertyType": "MRB",
+              "buildingLocation": {
+                "countryCode": "DE",
+                "addressLine1": "Blk 123 Street Name",
+                "addressLine2": "Building 5",
+                "city": "Jordan",
+                "addressLine3": "Unit 09-88",
+                "area": "Kowloon",
+                "district": "Kowloon",
+                "country": "Hong Kong",
+                "postalCode": ""
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "E8888888",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Jordan",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "Kowloon",
+                  "country": "Hong Kong",
+                  "postalCode": ""
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-20T06:28:25.414Z",
+          "quotationDetails": {
+            "quotationReferenceNo": "QTW0724498090",
+            "partyType": "naturalPerson",
+            "expiryDate": "2025-01-25",
+            "planType": "Basic",
+            "selectedPackageId": "P001",
+            "issueDate": "2025-01-07",
+            "premiumDetails": {
+              "tax": 1.06,
+              "loading": 0,
+              "discount": 0,
+              "policyFee": 0,
+              "basePremium": 1063.22,
+              "premiumPayable": 1064.28,
+              "premiumAfterFee": 1063.22,
+              "totalRiderPremium": 1063.22,
+              "basePremiumPostDeductible": 1063.22,
+              "totalPremiumAfterDiscount": 1063.22,
+              "totalPremiumBeforeDiscount": 1063.22
+            },
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": true,
+                    "groupName": "Medical Expenses",
+                    "name": "Accelerated Disability",
+                    "information": "Disability coverage covers all the disability incurred during the tenure of the trip for the insured person.",
+                    "isInbuilt": true,
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "underWritings": {
+                  "otherDetails": [
+                    {
+                      "id": "M0A01",
+                      "name": "Is the building located in Special Economical Zone in HongKong",
+                      "description": "Yes"
+                    }
+                  ]
+                },
+                "waitingPeriod": "90 days",
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalID": "E8888888",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "DE",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Jordan",
+                    "addressLine3": "Unit 09-88",
+                    "area": "Kowloon",
+                    "district": "Kowloon",
+                    "country": "Hong Kong",
+                    "postalCode": ""
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Pre-existing Conditions",
+                    "description": "Coverage does not apply to conditions diagnosed before policy start date"
+                  }
+                ],
+                "isMainPolicyHolder": true
+              }
+            ],
+            "effectiveDate": "2025-07-27"
+          },
+          "quoteId": "HS-Q25-8005133",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "QTW0724498090",
+          "pnRequestReferenceNo": "PTW0724498090",
+          "productCode": "ALZ-HK-HOM-v001",
+          "promoCode": "",
+          "iPolId":"${iPolId}"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    }
+  ]
+}

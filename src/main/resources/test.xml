@@ -1,0 +1,45 @@
+<suite name="Core360f API Suite">
+
+    <listeners>
+        <listener class-name="org.core360f.report.CustomTestReport" />
+        <listener class-name="org.core360f.report.EmailExecutionListener" />
+    </listeners>
+
+    <test name="Auth">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/360F_ Get_Token.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+    <test name="Travel E2E">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Travel_E2E.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+    <test name="Home E2E">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Home_E2E.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+    <test name="Cyber E2E">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+
+    <test name="Get Quote">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Get_Quote.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+
+</suite>
