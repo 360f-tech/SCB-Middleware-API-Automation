@@ -2,7 +2,7 @@
   "name": "Cyber E2E",
   "Test": [
     {
-      "Name": "Get Quote for Cyber",
+      "Name": "Get Quote - Cyber",
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
@@ -82,7 +82,8 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
-
+             "data.quoteId":"notNullValue()",
+            "data.product.name": "notNullValue()"
           }
         }
       }

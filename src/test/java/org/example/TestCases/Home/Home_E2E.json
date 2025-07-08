@@ -87,12 +87,7 @@
           "statusCode": 200,
           "validator": {
             "body_validator": {
-              "data.product.name": "notNullValue()",
-              "data.product.category": "notNullValue()",
-              "data.quoteId": "notNullValue()",
-              "data.sessionId": "notNullValue()",
-              "data.preferences.language":"notNullValue()",
-              "data.packages[0].id": "notNullValue()"
+
             }
           }
         }

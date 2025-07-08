@@ -1,5 +1,5 @@
 {
-  "name": "360F-auth",
+  "name": "360F-Get Token",
   "Test": [
     {
       "Name": "Get Token",

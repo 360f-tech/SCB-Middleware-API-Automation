@@ -18,351 +18,36 @@
     <script type="text/babel">
         // Test data from Java
         const testData = {
-  "src/test/java/org/example/TestCases/360F-auth.json": {
+  "src/test/java/org/example/TestCases/Travel/Get_Quote.json": {
     "tests": {
-      "Get Token": {
-        "name": "Get Token",
+      "Valid quotation for single trip": {
+        "name": "Valid quotation for single trip",
         "responseData": {
-          "statusCode": 200
+          "stackTrace": "java.lang.ClassCastException: class java.lang.Boolean cannot be cast to class java.lang.String (java.lang.Boolean and java.lang.String are in module java.base of loader \u0027bootstrap\u0027)\r\n\tat org.core360f.base.Validator.validateSingleTest(Validator.java:23)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:30)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:30)\r\n\tat org.example.SCB_E2E.runTest(SCB_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
+          "error": "class java.lang.Boolean cannot be cast to class java.lang.String (java.lang.Boolean and java.lang.String are in module java.base of loader \u0027bootstrap\u0027)",
+          "statusCode": 400
         },
         "requestData": {
           "Body": {
-            "name": "Get Token",
-            "method": "POST",
-            "endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
-            "request": {
-              "body": {
-                "client_id": "scbbanca@2025",
-                "client_secret": "Scb_2025$Msl05World",
-                "grant_type": "client_credentials"
-              }
-            },
-            "response": {
-              "validator": {
-                "body_validator": {
-                  "token_type": "equalTo(Bearer)"
-                }
-              },
-              "statusCode": 200
-            }
-          }
-        },
-        "status": "passed"
-      }
-    },
-    "data": {
-      "name": "360F-auth",
-      "Test": [
-        {
-          "Name": "Get Token",
-          "Method": "POST",
-          "Endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
-          "Request": {
-            "body": {
-              "client_id": "scbbanca@2025",
-              "client_secret": "Scb_2025$Msl05World",
-              "grant_type": "client_credentials"
-            }
-          },
-          "Response": {
-            "statusCode": 200.0,
-            "validator": {
-              "body_validator": {
-                "token_type": "equalTo(Bearer)"
-              }
-            }
-          }
-        }
-      ]
-    },
-    "nameList": [
-      "Get Token"
-    ]
-  },
-  "src/test/java/org/example/TestCases/Home/Home_E2E.json": {
-    "tests": {
-      "Purchase Notification for Home": {
-        "name": "Purchase Notification for Home",
-        "responseData": {
-          "statusCode": 200
-        },
-        "requestData": {
-          "Body": {
-            "name": "Purchase Notification for Home",
-            "method": "POST",
-            "endpoint": "/360-scb/api/v1/purchase-notification",
-            "request": {
-              "body": {
-                "payment": {
-                  "method": "CASA",
-                  "channel": "ibanking",
-                  "ddlMandateNumber": "EI9496202504119693",
-                  "externalReferenceNumber": "SGSCHHOME202504111204356",
-                  "paymentSessionId": "ABC55566",
-                  "bankAccount": {
-                    "accountName": "Name Umbrella",
-                    "accountNumber": "2429856470"
-                  },
-                  "status": "SUCCESS",
-                  "externalTokenNumber": "ABC55566",
-                  "amount": 120,
-                  "dateTime": "2025-06-09T11:58:12.104Z",
-                  "frequency": "Annual"
-                },
-                "insuredEntities": {
-                  "property": {
-                    "bank": {
-                      "bankName": "ICICI",
-                      "bankBranch": "xxxxxx",
-                      "accountNumber": "xxxxxxxxxxx"
-                    },
-                    "hasLoan": true,
-                    "carpetArea": "1000",
-                    "buildingAge": 5,
-                    "propertyType": "MRB",
-                    "buildingLocation": {
-                      "countryCode": "DE",
-                      "addressLine1": "Blk 123 Street Name",
-                      "addressLine2": "Building 5",
-                      "city": "Jordan",
-                      "addressLine3": "Unit 09-88",
-                      "area": "Kowloon",
-                      "district": "Kowloon",
-                      "country": "Hong Kong",
-                      "postalCode": ""
-                    }
-                  }
-                },
-                "insuranceCompanyCode": "ALZHK",
-                "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
-                "policyHolders": [
-                  {
-                    "policyHolderId": 1,
-                    "personalDetails": {
-                      "preferredContactMethod": "email",
-                      "lastName": "Graeme",
-                      "gender": "M",
-                      "mobile": "99882233",
-                      "nationalIdType": "NRIC",
-                      "occupation": "Engineer",
-                      "nationalID": "E8888888",
-                      "isSmoker": false,
-                      "residentialAddress": {
-                        "countryCode": "DE",
-                        "addressLine1": "Blk 123 Street Name",
-                        "addressLine2": "Building 5",
-                        "city": "Jordan",
-                        "addressLine3": "Unit 09-88",
-                        "area": "Kowloon",
-                        "district": "Kowloon",
-                        "country": "Hong Kong",
-                        "postalCode": ""
-                      },
-                      "isAdult": true,
-                      "dob": "1993-11-01",
-                      "title": "MR",
-                      "firstName": "Alex",
-                      "nationality": "SG",
-                      "email": "alex@gmail.com",
-                      "age": 31
-                    }
-                  }
-                ],
-                "timestamp": "2025-06-20T06:28:25.414Z",
-                "quotationDetails": {
-                  "quotationReferenceNo": "QTW0724498090",
-                  "partyType": "naturalPerson",
-                  "expiryDate": "2025-01-25",
-                  "planType": "Basic",
-                  "selectedPackageId": "P001",
-                  "issueDate": "2025-01-07",
-                  "premiumDetails": {
-                    "tax": 1.06,
-                    "loading": 0,
-                    "discount": 0,
-                    "policyFee": 0,
-                    "basePremium": 1063.22,
-                    "premiumPayable": 1064.28,
-                    "premiumAfterFee": 1063.22,
-                    "totalRiderPremium": 1063.22,
-                    "basePremiumPostDeductible": 1063.22,
-                    "totalPremiumAfterDiscount": 1063.22,
-                    "totalPremiumBeforeDiscount": 1063.22
-                  },
-                  "insuredPersons": [
-                    {
-                      "otherBenefits": [
-                        {
-                          "isSelected": true,
-                          "groupName": "Medical Expenses",
-                          "name": "Accelerated Disability",
-                          "information": "Disability coverage covers all the disability incurred during the tenure of the trip for the insured person.",
-                          "isInbuilt": true,
-                          "coverageLimit": 0,
-                          "premium": {
-                            "annualPremium": 0,
-                            "monthlyPremium": 0
-                          },
-                          "id": "RDR001",
-                          "sequenceId": "01",
-                          "description": "Provides disability coverage"
-                        }
-                      ],
-                      "underWritings": {
-                        "otherDetails": [
-                          {
-                            "id": "M0A01",
-                            "name": "Is the building located in Special Economical Zone in HongKong",
-                            "description": "Yes"
-                          }
-                        ]
-                      },
-                      "waitingPeriod": "90 days",
-                      "personalDetails": {
-                        "preferredContactMethod": "email",
-                        "lastName": "Graeme",
-                        "gender": "M",
-                        "mobile": "99882233",
-                        "nationalIdType": "NRIC",
-                        "occupation": "Engineer",
-                        "nationalID": "E8888888",
-                        "isSmoker": false,
-                        "residentialAddress": {
-                          "countryCode": "DE",
-                          "addressLine1": "Blk 123 Street Name",
-                          "addressLine2": "Building 5",
-                          "city": "Jordan",
-                          "addressLine3": "Unit 09-88",
-                          "area": "Kowloon",
-                          "district": "Kowloon",
-                          "country": "Hong Kong",
-                          "postalCode": ""
-                        },
-                        "isAdult": true,
-                        "dob": "1993-11-01",
-                        "title": "MR",
-                        "firstName": "Alex",
-                        "nationality": "SG",
-                        "email": "alex@gmail.com",
-                        "age": 31
-                      },
-                      "insuredPersonsId": 1,
-                      "coverageExclusions": [
-                        {
-                          "type": "Pre-existing Conditions",
-                          "description": "Coverage does not apply to conditions diagnosed before policy start date"
-                        }
-                      ],
-                      "isMainPolicyHolder": true
-                    }
-                  ],
-                  "effectiveDate": "2025-07-27"
-                },
-                "quoteId": "HS-Q25-8005133",
-                "preferences": {
-                  "currency": "HKD",
-                  "language": "en"
-                },
-                "quoteRequestReferenceNo": "QTW0724498090",
-                "pnRequestReferenceNo": "PTW0724498090",
-                "productCode": "ALZ-HK-HOM-v001",
-                "promoCode": "",
-                "iPolId": "250824"
-              }
-            },
-            "response": {
-              "validator": {
-                "body_validator": {}
-              },
-              "statusCode": 200
-            }
-          }
-        },
-        "status": "passed"
-      },
-      "Get Quote for Home": {
-        "name": "Get Quote for Home",
-        "responseData": {
-          "statusCode": 200
-        },
-        "requestData": {
-          "Body": {
-            "name": "Get Quote for Home",
-            "method": "POST",
-            "endpoint": "/360-scb/api/v1/quote",
-            "request": {
-              "body": {
-                "productCode": "ALZ-HK-HOM-v001",
-                "quoteRequestReferenceNo": "",
-                "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
-                "quoteId": "",
-                "timestamp": "2025-06-26T10:25:33.443Z",
-                "policyEffectiveDate": "2025-08-27",
-                "selectedPackageID": "",
-                "product": {},
-                "quotationDetails": {
-                  "preferences": {
-                    "currency": "en",
-                    "language": "HKD"
-                  },
-                  "insuredPersons": [
-                    {
-                      "otherBenefits": [
-                        {
-                          "id": "",
-                          "isSelected": true
-                        }
-                      ]
-                    }
-                  ],
-                  "insuredEntities": {
-                    "property": {
-                      "buildingAge": 0
-                    }
-                  }
-                }
-              }
-            },
-            "response": {
-              "validator": {
-                "body_validator": {
-                  "data.quoteId": "notNullValue()",
-                  "data.sessionId": "notNullValue()",
-                  "data.preferences.language": "notNullValue()"
-                }
-              },
-              "statusCode": 200
-            }
-          }
-        },
-        "status": "passed"
-      },
-      "Secound Get Quote for Home": {
-        "name": "Secound Get Quote for Home",
-        "responseData": {
-          "statusCode": 200
-        },
-        "requestData": {
-          "Body": {
-            "name": "Secound Get Quote for Home",
+            "name": "Valid quotation for single trip",
             "method": "POST",
             "endpoint": "/360-scb/api/v1/quote",
             "request": {
               "body": {
                 "channel": "IBNK",
                 "insuranceCompanyCode": "ALZHK",
-                "productCode": "ALZ-HK-HOM-v001",
+                "productCode": "ALZ-HK-TRV-v001",
                 "policyEffectiveDate": "2025-08-27",
-                "selectedPackageId": "P001",
+                "selectedPackageId": "",
                 "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-                "quoteRequestReferenceNo": "P001",
+                "quoteRequestReferenceNo": "",
                 "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
                 "timestamp": "2025-06-08T00:00:00.000Z",
                 "product": {
-                  "id": "TRVSG",
-                  "name": "Home Insurance",
-                  "category": "Home",
-                  "promoCode": "",
+                  "id": "TRVHK",
+                  "name": "Travel Insurance",
+                  "category": "Travel",
+                  "promoCode": "SCBSTAFF",
                   "referralCode": "",
                   "userSpecificDiscountFlag": false
                 },
@@ -376,7 +61,7 @@
                     "travel": {
                       "tripInfo": {
                         "endDate": "2025-10-30",
-                        "tripType": "Single",
+                        "tripType": "single",
                         "startDate": "2025-10-10",
                         "bookingDate": "2025-06-08T00:00:00.000Z",
                         "destinations": [
@@ -539,86 +224,40 @@
             },
             "response": {
               "validator": {
-                "body_validator": {}
+                "body_validator": {
+                  "success": true
+                }
               },
               "statusCode": 200
             }
           }
         },
-        "status": "passed"
+        "status": "failed"
       }
     },
     "data": {
-      "name": "Home E2E",
+      "name": "Get Quote - Travel",
       "Test": [
         {
-          "Name": "Get Quote for Home",
-          "Method": "POST",
-          "Endpoint": "/360-scb/api/v1/quote",
-          "Request": {
-            "body": {
-              "productCode": "ALZ-HK-HOM-v001",
-              "quoteRequestReferenceNo": "",
-              "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
-              "quoteId": "",
-              "timestamp": "2025-06-26T10:25:33.443Z",
-              "policyEffectiveDate": "2025-08-27",
-              "selectedPackageID": "",
-              "product": {},
-              "quotationDetails": {
-                "preferences": {
-                  "currency": "en",
-                  "language": "HKD"
-                },
-                "insuredPersons": [
-                  {
-                    "otherBenefits": [
-                      {
-                        "id": "",
-                        "isSelected": true
-                      }
-                    ]
-                  }
-                ],
-                "insuredEntities": {
-                  "property": {
-                    "buildingAge": 0.0
-                  }
-                }
-              }
-            }
-          },
-          "Response": {
-            "statusCode": 200.0,
-            "validator": {
-              "body_validator": {
-                "data.quoteId": "notNullValue()",
-                "data.sessionId": "notNullValue()",
-                "data.preferences.language": "notNullValue()"
-              }
-            }
-          }
-        },
-        {
-          "Name": "Secound Get Quote for Home",
+          "Name": "Valid quotation for single trip",
           "Method": "POST",
           "Endpoint": "/360-scb/api/v1/quote",
           "Request": {
             "body": {
               "channel": "IBNK",
               "insuranceCompanyCode": "ALZHK",
-              "productCode": "ALZ-HK-HOM-v001",
+              "productCode": "ALZ-HK-TRV-v001",
               "policyEffectiveDate": "2025-08-27",
-              "selectedPackageId": "P001",
+              "selectedPackageId": "",
               "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-              "quoteRequestReferenceNo": "P001",
+              "quoteRequestReferenceNo": "",
               "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
               "timestamp": "2025-06-08T00:00:00.000Z",
               "product": {
-                "id": "TRVSG",
-                "name": "Home Insurance",
-                "category": "Home",
-                "promoCode": "",
+                "id": "TRVHK",
+                "name": "Travel Insurance",
+                "category": "Travel",
+                "promoCode": "SCBSTAFF",
                 "referralCode": "",
                 "userSpecificDiscountFlag": false
               },
@@ -632,7 +271,7 @@
                   "travel": {
                     "tripInfo": {
                       "endDate": "2025-10-30",
-                      "tripType": "Single",
+                      "tripType": "single",
                       "startDate": "2025-10-10",
                       "bookingDate": "2025-06-08T00:00:00.000Z",
                       "destinations": [
@@ -796,206 +435,77 @@
           "Response": {
             "statusCode": 200.0,
             "validator": {
-              "body_validator": {}
-            }
-          }
-        },
-        {
-          "Name": "Purchase Notification for Home",
-          "Method": "POST",
-          "Endpoint": "/360-scb/api/v1/purchase-notification",
-          "Request": {
-            "body": {
-              "payment": {
-                "method": "CASA",
-                "channel": "ibanking",
-                "ddlMandateNumber": "EI9496202504119693",
-                "externalReferenceNumber": "SGSCHHOME202504111204356",
-                "paymentSessionId": "ABC55566",
-                "bankAccount": {
-                  "accountName": "Name Umbrella",
-                  "accountNumber": "2429856470"
-                },
-                "status": "SUCCESS",
-                "externalTokenNumber": "ABC55566",
-                "amount": 120.0,
-                "dateTime": "2025-06-09T11:58:12.104Z",
-                "frequency": "Annual"
-              },
-              "insuredEntities": {
-                "property": {
-                  "bank": {
-                    "bankName": "ICICI",
-                    "bankBranch": "xxxxxx",
-                    "accountNumber": "xxxxxxxxxxx"
-                  },
-                  "hasLoan": true,
-                  "carpetArea": "1000",
-                  "buildingAge": 5.0,
-                  "propertyType": "MRB",
-                  "buildingLocation": {
-                    "countryCode": "DE",
-                    "addressLine1": "Blk 123 Street Name",
-                    "addressLine2": "Building 5",
-                    "city": "Jordan",
-                    "addressLine3": "Unit 09-88",
-                    "area": "Kowloon",
-                    "district": "Kowloon",
-                    "country": "Hong Kong",
-                    "postalCode": ""
-                  }
-                }
-              },
-              "insuranceCompanyCode": "ALZHK",
-              "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
-              "policyHolders": [
-                {
-                  "policyHolderId": 1.0,
-                  "personalDetails": {
-                    "preferredContactMethod": "email",
-                    "lastName": "Graeme",
-                    "gender": "M",
-                    "mobile": "99882233",
-                    "nationalIdType": "NRIC",
-                    "occupation": "Engineer",
-                    "nationalID": "E8888888",
-                    "isSmoker": false,
-                    "residentialAddress": {
-                      "countryCode": "DE",
-                      "addressLine1": "Blk 123 Street Name",
-                      "addressLine2": "Building 5",
-                      "city": "Jordan",
-                      "addressLine3": "Unit 09-88",
-                      "area": "Kowloon",
-                      "district": "Kowloon",
-                      "country": "Hong Kong",
-                      "postalCode": ""
-                    },
-                    "isAdult": true,
-                    "dob": "1993-11-01",
-                    "title": "MR",
-                    "firstName": "Alex",
-                    "nationality": "SG",
-                    "email": "alex@gmail.com",
-                    "age": 31.0
-                  }
-                }
-              ],
-              "timestamp": "2025-06-20T06:28:25.414Z",
-              "quotationDetails": {
-                "quotationReferenceNo": "QTW0724498090",
-                "partyType": "naturalPerson",
-                "expiryDate": "2025-01-25",
-                "planType": "Basic",
-                "selectedPackageId": "P001",
-                "issueDate": "2025-01-07",
-                "premiumDetails": {
-                  "tax": 1.06,
-                  "loading": 0.0,
-                  "discount": 0.0,
-                  "policyFee": 0.0,
-                  "basePremium": 1063.22,
-                  "premiumPayable": 1064.28,
-                  "premiumAfterFee": 1063.22,
-                  "totalRiderPremium": 1063.22,
-                  "basePremiumPostDeductible": 1063.22,
-                  "totalPremiumAfterDiscount": 1063.22,
-                  "totalPremiumBeforeDiscount": 1063.22
-                },
-                "insuredPersons": [
-                  {
-                    "otherBenefits": [
-                      {
-                        "isSelected": true,
-                        "groupName": "Medical Expenses",
-                        "name": "Accelerated Disability",
-                        "information": "Disability coverage covers all the disability incurred during the tenure of the trip for the insured person.",
-                        "isInbuilt": true,
-                        "coverageLimit": 0.0,
-                        "premium": {
-                          "annualPremium": 0.0,
-                          "monthlyPremium": 0.0
-                        },
-                        "id": "RDR001",
-                        "sequenceId": "01",
-                        "description": "Provides disability coverage"
-                      }
-                    ],
-                    "underWritings": {
-                      "otherDetails": [
-                        {
-                          "id": "M0A01",
-                          "name": "Is the building located in Special Economical Zone in HongKong",
-                          "description": "Yes"
-                        }
-                      ]
-                    },
-                    "waitingPeriod": "90 days",
-                    "personalDetails": {
-                      "preferredContactMethod": "email",
-                      "lastName": "Graeme",
-                      "gender": "M",
-                      "mobile": "99882233",
-                      "nationalIdType": "NRIC",
-                      "occupation": "Engineer",
-                      "nationalID": "E8888888",
-                      "isSmoker": false,
-                      "residentialAddress": {
-                        "countryCode": "DE",
-                        "addressLine1": "Blk 123 Street Name",
-                        "addressLine2": "Building 5",
-                        "city": "Jordan",
-                        "addressLine3": "Unit 09-88",
-                        "area": "Kowloon",
-                        "district": "Kowloon",
-                        "country": "Hong Kong",
-                        "postalCode": ""
-                      },
-                      "isAdult": true,
-                      "dob": "1993-11-01",
-                      "title": "MR",
-                      "firstName": "Alex",
-                      "nationality": "SG",
-                      "email": "alex@gmail.com",
-                      "age": 31.0
-                    },
-                    "insuredPersonsId": 1.0,
-                    "coverageExclusions": [
-                      {
-                        "type": "Pre-existing Conditions",
-                        "description": "Coverage does not apply to conditions diagnosed before policy start date"
-                      }
-                    ],
-                    "isMainPolicyHolder": true
-                  }
-                ],
-                "effectiveDate": "2025-07-27"
-              },
-              "quoteId": "HS-Q25-8005133",
-              "preferences": {
-                "currency": "HKD",
-                "language": "en"
-              },
-              "quoteRequestReferenceNo": "QTW0724498090",
-              "pnRequestReferenceNo": "PTW0724498090",
-              "productCode": "ALZ-HK-HOM-v001",
-              "promoCode": "",
-              "iPolId": "${iPolId}"
-            }
-          },
-          "Response": {
-            "statusCode": 200.0,
-            "validator": {
-              "body_validator": {}
+              "body_validator": {
+                "success": true
+              }
             }
           }
         }
       ]
     },
     "nameList": [
-      "Get Quote for Home",
-      "Secound Get Quote for Home",
-      "Purchase Notification for Home"
+      "Valid quotation for single trip"
+    ]
+  },
+  "src/test/java/org/example/TestCases/360F_ Get_Token.json": {
+    "tests": {
+      "Get Token": {
+        "name": "Get Token",
+        "responseData": {
+          "statusCode": 200
+        },
+        "requestData": {
+          "Body": {
+            "name": "Get Token",
+            "method": "POST",
+            "endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
+            "request": {
+              "body": {
+                "client_id": "scbbanca@2025",
+                "client_secret": "Scb_2025$Msl05World",
+                "grant_type": "client_credentials"
+              }
+            },
+            "response": {
+              "validator": {
+                "body_validator": {
+                  "token_type": "equalTo(Bearer)"
+                }
+              },
+              "statusCode": 200
+            }
+          }
+        },
+        "status": "passed"
+      }
+    },
+    "data": {
+      "name": "360F-Get Token",
+      "Test": [
+        {
+          "Name": "Get Token",
+          "Method": "POST",
+          "Endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
+          "Request": {
+            "body": {
+              "client_id": "scbbanca@2025",
+              "client_secret": "Scb_2025$Msl05World",
+              "grant_type": "client_credentials"
+            }
+          },
+          "Response": {
+            "statusCode": 200.0,
+            "validator": {
+              "body_validator": {
+                "token_type": "equalTo(Bearer)"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "nameList": [
+      "Get Token"
     ]
   }
 };
@@ -1018,19 +528,36 @@ const TestDashboard = ({ testData = {} }) => {
     Object.keys(testData).forEach(filePath => {
       const fileData = testData[filePath] || {};
       const parts = filePath.split('/');
+  const fileName = parts[parts.length - 1];
+const displayName = fileName.replace(/\.json$/, '');
+// If status filter is 'All', include all files
+      if (statusFilter === 'All') {
+        files.push({
+          path: filePath,
+          name: displayName
+        });
+      } else {
+        // Only include files that have tests matching the status filter
+        const hasMatchingTests = fileData.tests && Object.values(fileData.tests).some(test => {
+          const testStatus = test.status ? test.status.toLowerCase() : 'skipped';
+          return testStatus === statusFilter.toLowerCase();
+        });
+        
+        if (hasMatchingTests) {
       files.push({
         path: filePath,
-        name: parts[parts.length - 1]
+        name: displayName
       });
-    });
-    
+    }
+}
+});
     return files;
-  }, [testData]);
+  },[testData,statusFilter]);
 
   // Update active file when status changes if current file doesn't match
   React.useEffect(() => {
     if (filteredTestFiles.length > 0) {
-      if (!activeFile ||(activeFile !== 'All' && !testData[activeFile])) {
+      if (!activeFile ||(activeFile !== 'All' && !filteredTestFiles.find(f => f.path === activeFile))) {
         setActiveFile('ALL');
         setActiveTestId(null);
         setActiveTest(null);
@@ -1040,22 +567,29 @@ const TestDashboard = ({ testData = {} }) => {
       setActiveTestId(null);
       setActiveTest(null);
     }
-  }, [statusFilter, filteredTestFiles, activeFile, testData]);
+  }, [statusFilter, filteredTestFiles, activeFile]);
 
   // Set first file as active by default when test data is first loaded
   React.useEffect(() => {
     if (Object.keys(testData).length > 0 && !activeFile) {
-      setActiveFile(filteredTestFiles[0].path);
+      setActiveFile(filteredTestFiles[0]?.path || 'All');
     }
-  }, [testData, activeFile]);
+  }, [testData, activeFile, filteredTestFiles]);
 
   // Get current file data
   const currentFileData = React.useMemo(() => {
 if (activeFile === 'All') {
-return testData;
+ // When "All" is selected, only include files that match the status filter
+      const filteredData = {};
+      filteredTestFiles.forEach(file => {
+        if (testData[file.path]) {
+          filteredData[file.path] = testData[file.path];
+        }
+      });
+      return filteredData;
 }
- return activeFile ? { [activeFile]: testData[activeFile] } : null    
-   }, [activeFile, testData]);
+ return activeFile ? { [activeFile]: testData[activeFile] } : null;    
+   }, [activeFile, testData, filteredTestFiles]);
   // Get tests for current file - use test objects directly
   const testsForFile = React.useMemo(() => {
     if (!currentFileData) return [];
@@ -1121,7 +655,8 @@ return Math.round((allCounts.passed / allCounts.total) * 100);
     setStatusFilter(newStatus);
     setActiveTest(null);
     setActiveTestId(null);
-  };
+  // Reset active file to 'All' when status changes
+    setActiveFile('All');};
   
   // Handle test selection from dropdown
   const handleTestSelect = (e) => {
@@ -1230,7 +765,7 @@ return Math.round((allCounts.passed / allCounts.total) * 100);
               <label className="block text-gray-700 text-lg mb-2">Select Test</label>
               <select className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" value={activeTestId || ''} onChange={handleTestSelect}>
                 <option value="">Select a test</option>
-                {testsForFile.map((test, idx) => (
+                {filteredTests.map((test, idx) => (
                   <option key={idx} value={test.name}>{test.name}</option>
                 ))}
               </select>
@@ -1274,7 +809,7 @@ return Math.round((allCounts.passed / allCounts.total) * 100);
                   <tbody>
                     {filteredTests.length > 0 ? (
                       filteredTests.map((test, index) => (
-                        <tr key={index} className={`border-b border-gray-200 cursor-pointer ${activeTest === test ? 'bg-blue-50' : ''}`} onClick={() => { setActiveTest(test); setActiveTestId(test.name); setActiveTab('details'); }}>
+                        <tr key={index} className={`border-b border-gray-200 cursor-pointer hover:bg-gray-50 ${activeTest === test ? 'bg-blue-50' : ''}`} onClick={() => { setActiveTest(test); setActiveTestId(test.name); setActiveTab('details'); }}>
                           <td className="py-3 px-4">{test.name}</td>
                           <td className="py-3 px-4">{getStatusDisplay(test)}</td>
                         </tr>
