@@ -225,7 +225,7 @@
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/purchase-notification",
       "Request": {
-        "body": {
+        "body":{
           "channel": "IBNK",
           "payment": {
             "method": "CASA",
@@ -363,14 +363,14 @@
             {
               "tax": 0,
               "loading": 0,
-              "discount": 379.2,
+              "discount": 347.6,
               "policyFee": 0,
               "basePremium": 632,
-              "premiumPayable": 252.8,
+              "premiumPayable": 284.4,
               "premiumAfterFee": 632,
               "totalRiderPremium": 632,
               "basePremiumPostDeductible": 632,
-              "totalPremiumAfterDiscount": 252.8,
+              "totalPremiumAfterDiscount": 284.4,
               "totalPremiumBeforeDiscount": 632
             }
           ,
@@ -393,7 +393,16 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
-            "data.policyStatus": "equalTo(\"Success\")"
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.quoteId":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "notNullValue()",
+            "data.packages[0].id":"notNullValue()",
+            "data.packages[0].name":"containsString(\"Single Trip\")",
+            "data.sessionId":"notNullValue()",
+            "data.preferences.language":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount":"notNullValue()"
 
           }
         }

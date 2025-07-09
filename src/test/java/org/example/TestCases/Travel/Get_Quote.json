@@ -20,7 +20,7 @@
             "id": "TRVHK",
             "name": "Travel Insurance",
             "category": "Travel",
-            "promoCode": "SCBSTAFF",
+            "promoCode": "",
             "referralCode": "",
             "userSpecificDiscountFlag": false
           },
@@ -202,7 +202,6 @@
           "body_validator": {
             "data.product.name": "equalTo(\"Travel Insurance\")",
             "data.product.category":"equalTo(\"Travel\")",
-            "data.product.promoCode": "equalTo(\"SCBSTAFF\")",
             "data.quoteId":"notNullValue()",
             "data.sessionId":"notNullValue()",
             "data.product.id": "equalTo(\"TRVHK\")"
@@ -562,6 +561,2686 @@
         "validator": {
           "body_validator": {
             "errors[0].code": "equalTo(\"E002\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Quotation with unsupported country code",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":
+        {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "Single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "ZZ"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+           "errors[0].code": "equalTo(\"NO_PRODUCT_AVAILABLE\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Invalid date range",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-10",
+                  "tripType": "Single",
+                  "startDate": "2025-10-30",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].code": "equalTo(\"NO_PRODUCT_AVAILABLE\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Language field blank",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "Single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].code": "equalTo(\"INVALID_LANGUAGE\")",
+            "errors[0].message":  "equalTo(\"Please check the format for language\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Invalid currency",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "Single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "XYZ",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].message": "equalTo(\"Internal Error : Currency XYZ is not authorized!\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Quotation with max allowed travellers",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "b494a38c-ca8e-4167-9daf-ae9fc4e3fab0",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "deb24890-f58f-4fc5-9380-1b31313d4188",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "Single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 20,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last1",
+                  "gender": "F",
+                  "mobileNumber": "912345601",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S3502827A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1987-07-19",
+                  "title": "MS",
+                  "firstName": "First1",
+                  "nationality": "SG",
+                  "email": "user1@example.com",
+                  "age": 38
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last2",
+                  "gender": "M",
+                  "mobileNumber": "912345602",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S6095091A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1989-07-18",
+                  "title": "MR",
+                  "firstName": "First2",
+                  "nationality": "SG",
+                  "email": "user2@example.com",
+                  "age": 36
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 3,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last3",
+                  "gender": "F",
+                  "mobileNumber": "912345603",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9364763A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1999-07-16",
+                  "title": "MS",
+                  "firstName": "First3",
+                  "nationality": "SG",
+                  "email": "user3@example.com",
+                  "age": 26
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 4,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last4",
+                  "gender": "M",
+                  "mobileNumber": "912345604",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9052964A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1996-07-16",
+                  "title": "MR",
+                  "firstName": "First4",
+                  "nationality": "SG",
+                  "email": "user4@example.com",
+                  "age": 29
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 5,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last5",
+                  "gender": "F",
+                  "mobileNumber": "912345605",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S6067066A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1992-07-17",
+                  "title": "MS",
+                  "firstName": "First5",
+                  "nationality": "SG",
+                  "email": "user5@example.com",
+                  "age": 33
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 6,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last6",
+                  "gender": "M",
+                  "mobileNumber": "912345606",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S8705992A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1985-07-19",
+                  "title": "MR",
+                  "firstName": "First6",
+                  "nationality": "SG",
+                  "email": "user6@example.com",
+                  "age": 40
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 7,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last7",
+                  "gender": "F",
+                  "mobileNumber": "912345607",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S3947121A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1981-07-20",
+                  "title": "MS",
+                  "firstName": "First7",
+                  "nationality": "SG",
+                  "email": "user7@example.com",
+                  "age": 44
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 8,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last8",
+                  "gender": "M",
+                  "mobileNumber": "912345608",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S4072463A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1999-07-16",
+                  "title": "MR",
+                  "firstName": "First8",
+                  "nationality": "SG",
+                  "email": "user8@example.com",
+                  "age": 26
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 9,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last9",
+                  "gender": "F",
+                  "mobileNumber": "912345609",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1635228A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1981-07-20",
+                  "title": "MS",
+                  "firstName": "First9",
+                  "nationality": "SG",
+                  "email": "user9@example.com",
+                  "age": 44
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 10,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last10",
+                  "gender": "M",
+                  "mobileNumber": "912345610",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S3599975A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1989-07-18",
+                  "title": "MR",
+                  "firstName": "First10",
+                  "nationality": "SG",
+                  "email": "user10@example.com",
+                  "age": 36
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 11,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last11",
+                  "gender": "F",
+                  "mobileNumber": "912345611",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S8184716A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2019-07-11",
+                  "title": "MS",
+                  "firstName": "First11",
+                  "nationality": "SG",
+                  "email": "user11@example.com",
+                  "age": 6
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 12,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last12",
+                  "gender": "M",
+                  "mobileNumber": "912345612",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S1709298A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2016-07-11",
+                  "title": "MR",
+                  "firstName": "First12",
+                  "nationality": "SG",
+                  "email": "user12@example.com",
+                  "age": 9
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 13,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last13",
+                  "gender": "F",
+                  "mobileNumber": "912345613",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S8995864A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2018-07-11",
+                  "title": "MS",
+                  "firstName": "First13",
+                  "nationality": "SG",
+                  "email": "user13@example.com",
+                  "age": 7
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 14,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last14",
+                  "gender": "M",
+                  "mobileNumber": "912345614",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S2543200A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2019-07-11",
+                  "title": "MR",
+                  "firstName": "First14",
+                  "nationality": "SG",
+                  "email": "user14@example.com",
+                  "age": 6
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 15,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last15",
+                  "gender": "F",
+                  "mobileNumber": "912345615",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S3108035A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2019-07-11",
+                  "title": "MS",
+                  "firstName": "First15",
+                  "nationality": "SG",
+                  "email": "user15@example.com",
+                  "age": 6
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 16,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last16",
+                  "gender": "M",
+                  "mobileNumber": "912345616",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S6266725A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2021-07-10",
+                  "title": "MR",
+                  "firstName": "First16",
+                  "nationality": "SG",
+                  "email": "user16@example.com",
+                  "age": 4
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 17,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last17",
+                  "gender": "F",
+                  "mobileNumber": "912345617",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S7542919A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2016-07-11",
+                  "title": "MS",
+                  "firstName": "First17",
+                  "nationality": "SG",
+                  "email": "user17@example.com",
+                  "age": 9
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 18,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last18",
+                  "gender": "M",
+                  "mobileNumber": "912345618",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S3245821A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2020-07-10",
+                  "title": "MR",
+                  "firstName": "First18",
+                  "nationality": "SG",
+                  "email": "user18@example.com",
+                  "age": 5
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 19,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last19",
+                  "gender": "F",
+                  "mobileNumber": "912345619",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S9687363A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2020-07-10",
+                  "title": "MS",
+                  "firstName": "First19",
+                  "nationality": "SG",
+                  "email": "user19@example.com",
+                  "age": 5
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 20,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Last20",
+                  "gender": "M",
+                  "mobileNumber": "912345620",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S2767948A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": false,
+                  "dob": "2015-07-12",
+                  "title": "MR",
+                  "firstName": "First20",
+                  "nationality": "SG",
+                  "email": "user20@example.com",
+                  "age": 10
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Quotation with past travel dates",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "SCBSTAFF",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2023-10-30",
+                  "tripType": "Single",
+                  "startDate": "2023-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Valid adult age",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1995-07-09",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 30
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1995-07-09",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 30
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.product.promoCode": "equalTo(\"SCBSTAFF\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Adult age below limit",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Doe",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S1234567B",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "2010-07-09",
+                  "title": "MR",
+                  "firstName": "Tom",
+                  "nationality": "SG",
+                  "email": "tom@gmail.com",
+                  "age": 15
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Adult age is 18 at boundary",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Lee",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "S7654321Z",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Example Rd",
+                    "addressLine2": "Building 9",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 10-01",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "654321"
+                  },
+                  "isAdult": true,
+                  "dob": "2007-07-09",
+                  "title": "MR",
+                  "firstName": "Chris",
+                  "nationality": "SG",
+                  "email": "chris.lee@gmail.com",
+                  "age": 18
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Adult age above maximum",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Individual",
+            "planType": "Basic",
+            "premiumTerm": 1,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Tan",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Retired",
+                  "nationalId": "S1111111Z",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 789 Senior Ave",
+                    "addressLine2": "Building 11",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 12-34",
+                    "country": "Singapore",
+                    "postalCode": "999999"
+                  },
+                  "isAdult": true,
+                  "dob": "1924-07-09",
+                  "title": "MR",
+                  "firstName": "Samuel",
+                  "nationality": "SG",
+                  "email": "samuel.tan@example.com",
+                  "age": 101
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Missing adult DOB",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Individual",
+            "planType": "Basic",
+            "premiumTerm": 1,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Smith",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567C",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 321 Main Street",
+                    "addressLine2": "",
+                    "city": "Singapore",
+                    "addressLine3": "",
+                    "country": "Singapore",
+                    "postalCode": "987654"
+                  },
+                  "isAdult": true,
+                  "dob": "",
+                  "title": "MR",
+                  "firstName": "David",
+                  "nationality": "SG",
+                  "email": "david.smith@gmail.com",
+                  "age": 30
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Age format invalid",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Individual",
+            "planType": "Basic",
+            "premiumTerm": 1,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Ng",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Manager",
+                  "nationalId": "S9876543X",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Example Road",
+                    "addressLine2": "Building 2",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 01-01",
+                    "country": "Singapore",
+                    "postalCode": "456789"
+                  },
+                  "isAdult": true,
+                  "dob": "1980/01/01",
+                  "title": "MR",
+                  "firstName": "Thomas",
+                  "nationality": "SG",
+                  "email": "thomas.ng@example.com",
+                  "age": 44
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Date of birth in future",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Individual",
+            "planType": "Basic",
+            "premiumTerm": 1,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 1,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Lee",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567Z",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 789 Orchard Rd",
+                    "addressLine2": "Tower B",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 12-34",
+                    "country": "Singapore",
+                    "postalCode": "567890"
+                  },
+                  "isAdult": true,
+                  "dob": "2030-01-01",
+                  "title": "MR",
+                  "firstName": "Michael",
+                  "nationality": "SG",
+                  "email": "michael.lee@example.com",
+                  "age": -5
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate Zero adults in request",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 1,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    {
+                      "location": "SG"
+                    }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Tan",
+                  "gender": "F",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "T1234567A",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 101 Child St",
+                    "addressLine2": "Level 3",
+                    "city": "Singapore",
+                    "addressLine3": "",
+                    "country": "Singapore",
+                    "postalCode": "600123"
+                  },
+                  "isAdult": false,
+                  "dob": "2015-09-01",
+                  "title": "MISS",
+                  "firstName": "Emily",
+                  "nationality": "SG",
+                  "email": "emily.tan@example.com",
+                  "age": 10
+                },
+                "otherBenefits": []
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Tan",
+                  "gender": "M",
+                  "mobileNumber": "99884455",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Student",
+                  "nationalId": "T7654321B",
+                  "isSmoker": false,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 101 Child St",
+                    "addressLine2": "Level 3",
+                    "city": "Singapore",
+                    "addressLine3": "",
+                    "country": "Singapore",
+                    "postalCode": "600123"
+                  },
+                  "isAdult": false,
+                  "dob": "2014-05-15",
+                  "title": "MASTER",
+                  "firstName": "Ethan",
+                  "nationality": "SG",
+                  "email": "ethan.tan@example.com",
+                  "age": 11
+                },
+                "otherBenefits": []
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
           }
         }
       }
