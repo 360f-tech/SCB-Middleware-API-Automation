@@ -38,5 +38,5 @@ jobs:
         run: mvn test
 
       - name: Build with Maven and execute api scripts
-        run: mvn clean install -Dsurefire.suiteXmlFiles=src/test/resources/test.xml
+        run: mvn clean install test -DtestSuite="test.xml" --file pom.xml
         continue-on-error: true
