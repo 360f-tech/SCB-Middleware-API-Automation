@@ -7,7 +7,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body": {
-          "policyEffectiveDate": "2025-07-09",
+          "policyEffectiveDate": "2025-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {

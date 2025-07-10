@@ -393,17 +393,9 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
-            "data.quoteId":"notNullValue()",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "notNullValue()",
-            "data.packages[0].id":"notNullValue()",
-            "data.packages[0].name":"containsString(\"Single Trip\")",
-            "data.sessionId":"notNullValue()",
-            "data.preferences.language":"notNullValue()",
-            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
-            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount":"notNullValue()",
-            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount":"notNullValue()"
-
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
           }
         }
       }
