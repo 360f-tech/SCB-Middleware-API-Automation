@@ -1,0 +1,107 @@
+{
+  "name": "Get Quote - Home",
+  "Test": [
+    {
+      "Name": "Get package details",
+      "Method": "POST",
+      "Endpoint": "/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 500,
+                "hasLoan": null,
+                "buildingAge": 0,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name": "equalTo(\"Silver\")",
+            "data.packages[0].id":"equalTo(\"P001\")",
+            "data.packages[1].id": "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name": "equalTo(\"Platinum\")",
+            "data.sessionId": "notNullValue()",
+            "data.preferences.currency": "notNullValue()",
+            "data.preferences.language": "notNullValue()",
+            "data.policyContent": "notNullValue()"
+
+          }
+        }
+      }
+
+    }
+  ]
+}

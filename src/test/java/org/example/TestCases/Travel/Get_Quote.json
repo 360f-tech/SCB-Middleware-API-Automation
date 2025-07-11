@@ -40,7 +40,7 @@
                   "bookingDate": "2025-06-08T00:00:00.000Z",
                   "destinations": [
                     {
-                      "location": "SG"
+                      "location": "MY"
                     }
                   ],
                   "travelPurpose": 1,
@@ -65,7 +65,7 @@
                   "nationalId": "S1234567A",
                   "isSmoker": true,
                   "residentialAddress": {
-                    "countryCode": "SG",
+                    "countryCode": "MY",
                     "addressLine1": "Blk 123 Street Name",
                     "addressLine2": "Building 5",
                     "city": "Singapore",
