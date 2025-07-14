@@ -66,7 +66,7 @@
               "travel": null,
               "property": {
                 "propertyType": null,
-                "carpetArea": null,
+                "carpetArea": 500,
                 "hasLoan": null,
                 "buildingAge": 0,
                 "buildingLocation": null,
@@ -297,11 +297,17 @@
         "validator": {
           "body_validator": {
 
+            "data.iPolId": "notNullValue()"
           }
         }
+      },
+      "Extract": {
+        "${iPolId}": "data.iPolId"
       }
-
     },
+
+
+
 
     {
       "Name": "Purchase Notification for Home",

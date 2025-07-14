@@ -6,7 +6,7 @@
     </listeners>
 
     <test name="Auth">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/360F_ Get_Token.json"/>
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Get_Token.json"/>
         <classes>
             <class name="org.example.SCB_E2E"/>
         </classes>
@@ -40,6 +40,13 @@
 <!--            <class name="org.example.SCB_E2E"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+
+<!--        <test name="Get Quote - Home">-->
+<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote.json"/>-->
+<!--            <classes>-->
+<!--                <class name="org.example.SCB_E2E"/>-->
+<!--            </classes>-->
+<!--        </test>-->
 
 
 </suite>

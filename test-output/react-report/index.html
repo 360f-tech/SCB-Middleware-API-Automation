@@ -23,9 +23,7 @@
       " purchase notification for travel ": {
         "name": " purchase notification for travel ",
         "responseData": {
-          "stackTrace": "java.lang.AssertionError: JSON path not found: data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId\nExpected: not null\n     but: was null\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)\r\n\tat org.core360f.base.Validator.validateSingleTest(Validator.java:37)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:30)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:30)\r\n\tat org.example.SCB_E2E.runTest(SCB_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
-          "error": "JSON path not found: data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId\nExpected: not null\n     but: was null",
-          "statusCode": 400
+          "statusCode": 200
         },
         "requestData": {
           "Body": {
@@ -198,22 +196,16 @@
             "response": {
               "validator": {
                 "body_validator": {
-                  "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "notNullValue()",
-                  "data.quoteId": "notNullValue()",
-                  "data.packages[0].id": "notNullValue()",
-                  "data.packages[0].name": "containsString(\"Single Trip\")",
                   "data.sessionId": "notNullValue()",
-                  "data.preferences.language": "notNullValue()",
-                  "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "notNullValue()",
-                  "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
-                  "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()"
+                  "data.policyNumber": "notNullValue()",
+                  "data.policyStatus": "equalTo(\"Success\")"
                 }
               },
               "statusCode": 200
             }
           }
         },
-        "status": "failed"
+        "status": "passed"
       },
       "Get Quote for travel": {
         "name": "Get Quote for travel",
@@ -821,15 +813,9 @@
             "statusCode": 200.0,
             "validator": {
               "body_validator": {
-                "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "notNullValue()",
-                "data.quoteId": "notNullValue()",
-                "data.packages[0].id": "notNullValue()",
-                "data.packages[0].name": "containsString(\"Single Trip\")",
                 "data.sessionId": "notNullValue()",
-                "data.preferences.language": "notNullValue()",
-                "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "notNullValue()",
-                "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
-                "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()"
+                "data.policyNumber": "notNullValue()",
+                "data.policyStatus": "equalTo(\"Success\")"
               }
             }
           }
@@ -1009,9 +995,7 @@
       "Get Quote - Cyber": {
         "name": "Get Quote - Cyber",
         "responseData": {
-          "stackTrace": "java.lang.AssertionError: Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:24)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:30)\r\n\tat org.example.SCB_E2E.runTest(SCB_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
-          "error": "Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e",
-          "statusCode": 400
+          "statusCode": 200
         },
         "requestData": {
           "Body": {
@@ -1020,7 +1004,7 @@
             "endpoint": "/360-scb/api/v1/quote",
             "request": {
               "body": {
-                "policyEffectiveDate": "2025-07-09",
+                "policyEffectiveDate": "2025-08-10",
                 "selectedPackageId": "P001",
                 "productCode": "ALZ-HK-CYB-v001",
                 "product": {
@@ -1102,7 +1086,7 @@
             }
           }
         },
-        "status": "failed"
+        "status": "passed"
       }
     },
     "data": {
@@ -1114,7 +1098,7 @@
           "Endpoint": "/360-scb/api/v1/quote",
           "Request": {
             "body": {
-              "policyEffectiveDate": "2025-07-09",
+              "policyEffectiveDate": "2025-08-10",
               "selectedPackageId": "P001",
               "productCode": "ALZ-HK-CYB-v001",
               "product": {
@@ -1361,9 +1345,7 @@
       "Purchase Notification for Home": {
         "name": "Purchase Notification for Home",
         "responseData": {
-          "stackTrace": "java.lang.AssertionError: Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:24)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:30)\r\n\tat org.example.SCB_E2E.runTest(SCB_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
-          "error": "Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e",
-          "statusCode": 400
+          "statusCode": 200
         },
         "requestData": {
           "Body": {
@@ -1546,7 +1528,7 @@
                 "pnRequestReferenceNo": "PTW0724498090",
                 "productCode": "ALZ-HK-HOM-v001",
                 "promoCode": "",
-                "iPolId": "252909"
+                "iPolId": "253884"
               }
             },
             "response": {
@@ -1557,14 +1539,12 @@
             }
           }
         },
-        "status": "failed"
+        "status": "passed"
       },
       "Get Quote for Home": {
         "name": "Get Quote for Home",
         "responseData": {
-          "stackTrace": "java.lang.AssertionError: Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)\r\n\tat org.core360f.base.ResponseVerify.responseValidation(ResponseVerify.java:24)\r\n\tat org.core360f.base.SampleFlowTesting.executeTest(SampleFlowTesting.java:30)\r\n\tat org.example.SCB_E2E.runTest(SCB_E2E.java:15)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\r\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\r\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\r\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\n",
-          "error": "Status Code mismatch\nExpected: \u003c200\u003e\n     but: was \u003c400\u003e",
-          "statusCode": 400
+          "statusCode": 200
         },
         "requestData": {
           "Body": {
@@ -1598,6 +1578,7 @@
                   ],
                   "insuredEntities": {
                     "property": {
+                      "carpetArea": 500,
                       "buildingAge": 0
                     }
                   }
@@ -1612,7 +1593,7 @@
             }
           }
         },
-        "status": "failed"
+        "status": "passed"
       },
       "Secound Get Quote for Home": {
         "name": "Secound Get Quote for Home",
@@ -1816,9 +1797,14 @@
             },
             "response": {
               "validator": {
-                "body_validator": {}
+                "body_validator": {
+                  "data.iPolId": "notNullValue()"
+                }
               },
               "statusCode": 200
+            },
+            "extract": {
+              "${iPolId}": "data.iPolId"
             }
           }
         },
@@ -1859,6 +1845,7 @@
                 ],
                 "insuredEntities": {
                   "property": {
+                    "carpetArea": 500.0,
                     "buildingAge": 0.0
                   }
                 }
@@ -2069,8 +2056,13 @@
           "Response": {
             "statusCode": 200.0,
             "validator": {
-              "body_validator": {}
+              "body_validator": {
+                "data.iPolId": "notNullValue()"
+              }
             }
+          },
+          "Extract": {
+            "${iPolId}": "data.iPolId"
           }
         },
         {
@@ -2293,10 +2285,14 @@
             "response": {
               "validator": {
                 "body_validator": {
+                  "access_token": "notNullValue()",
                   "token_type": "equalTo(Bearer)"
                 }
               },
               "statusCode": 200
+            },
+            "extract": {
+              "${access_token}": "access_token"
             }
           }
         },
@@ -2321,9 +2317,13 @@
             "statusCode": 200.0,
             "validator": {
               "body_validator": {
+                "access_token": "notNullValue()",
                 "token_type": "equalTo(Bearer)"
               }
             }
+          },
+          "Extract": {
+            "${access_token}": "access_token"
           }
         }
       ]
