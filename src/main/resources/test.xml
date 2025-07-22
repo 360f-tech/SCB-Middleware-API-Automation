@@ -34,19 +34,47 @@
     </test>
 
 
-<!--    <test name="Get Quote">-->
-<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Get_Quote.json"/>-->
-<!--        <classes>-->
-<!--            <class name="org.example.SCB_E2E"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Get Quote - Travel">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Get_Quote_Travel.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
 
-<!--        <test name="Get Quote - Home">-->
-<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote.json"/>-->
-<!--            <classes>-->
-<!--                <class name="org.example.SCB_E2E"/>-->
-<!--            </classes>-->
-<!--        </test>-->
+    <test name="Purchase Notification - Travel">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Purchase_Notification_Travel.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+        <test name="Get Quote - Home">
+            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote_Home.json"/>
+            <classes>
+                <class name="org.example.SCB_E2E"/>
+            </classes>
+        </test>
+
+    <test name="Purchase Notification - Home">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Purchase_Notification_Home.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+    <test name="Get Quote - Cyber ">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Get_Quote_Cyber.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+    <test name="Purchase Notification - Cyber ">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Purchase_Notification_Cyber.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
 
 
 </suite>

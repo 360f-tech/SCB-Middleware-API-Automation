@@ -2188,7 +2188,7 @@
             "id": "TRVHK",
             "name": "Travel Insurance",
             "category": "Travel",
-            "promoCode": "",
+            "promoCode": "SCBSTAFF",
             "referralCode": "",
             "userSpecificDiscountFlag": false
           },
@@ -2516,10 +2516,14 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
           }
         }
       }
@@ -2750,10 +2754,14 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
           }
         }
       }
@@ -2864,10 +2872,14 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
           }
         }
       }
@@ -2978,10 +2990,14 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
           }
         }
       }
@@ -3092,9 +3108,14 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
 
           }
         }

@@ -305,10 +305,6 @@
         "${iPolId}": "data.iPolId"
       }
     },
-
-
-
-
     {
       "Name": "Purchase Notification for Home",
       "Method": "POST",
@@ -327,7 +323,7 @@
             },
             "status": "SUCCESS",
             "externalTokenNumber": "ABC55566",
-            "amount": 120,
+            "amount":914.13,
             "dateTime": "2025-06-09T11:58:12.104Z",
             "frequency": "Annual"
           },
@@ -399,17 +395,17 @@
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
             "premiumDetails": {
-              "tax": 1.06,
+              "tax": 0.91,
               "loading": 0,
               "discount": 0,
               "policyFee": 0,
-              "basePremium": 1063.22,
-              "premiumPayable": 1064.28,
-              "premiumAfterFee": 1063.22,
-              "totalRiderPremium": 1063.22,
-              "basePremiumPostDeductible": 1063.22,
-              "totalPremiumAfterDiscount": 1063.22,
-              "totalPremiumBeforeDiscount": 1063.22
+              "basePremium": "913.22",
+              "premiumPayable": 914.13,
+              "premiumAfterFee": "913.22",
+              "totalRiderPremium": "0.00",
+              "basePremiumPostDeductible": -913.22,
+              "totalPremiumAfterDiscount": 913.22,
+              "totalPremiumBeforeDiscount": 913.22
             },
             "insuredPersons": [
               {
@@ -490,12 +486,16 @@
           "productCode": "ALZ-HK-HOM-v001",
           "promoCode": "",
           "iPolId":"${iPolId}"
+
         }
       },
       "Response": {
         "statusCode": 200,
         "validator": {
           "body_validator": {
+            "data.sessionId":"notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyEffectiveDate": "notNullValue()"
 
           }
         }
