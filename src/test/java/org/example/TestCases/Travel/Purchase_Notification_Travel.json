@@ -927,15 +927,18 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
 
           }
         }
       }
     },
+
 
     {
       "Name": "Validate amount in payment block matches premium",
@@ -1106,11 +1109,12 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
-
-
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
           }
         }
       }

@@ -1,0 +1,1149 @@
+{
+  "name": "Get Quick Quote for Home",
+  "Test": [
+    {
+      "Name": "Validate with carpetArea 501 and buildingAge 41",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 501,
+                "hasLoan": null,
+                "buildingAge": 41,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name":"equalTo(\"Silver\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[1].id":  "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name":  "equalTo(\"Platinum\")",
+            "data.insuredEntities.property.carpetArea":"notNullValue()",
+            "data.insuredEntities.property.buildingAge":"notNullValue()",
+            "data.preferences.currency": "equalTo(\"en\")",
+            "data.preferences.language":"equalTo(\"HKD\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>100,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId":"equalTo(\"102\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"<p>10,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].sequenceId":"equalTo(\"113\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"<p>金錢損失<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].sequenceId":"equalTo(\"114\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"<p>未經獲授權使用信用卡<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit": "equalTo(\"<p>2,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].sequenceId":"equalTo(\"121\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"<p>個人責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"<p>個人法律責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit": "equalTo(\"<p>4,000,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].sequenceId":"equalTo(\"131\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].coverageLimit": "equalTo(\"<p>不適用</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].sequenceId":"equalTo(\"141\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name": "equalTo(\"<p>臨時搬遷保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].coverageLimit": "equalTo(\"<p>75,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].sequenceId":"equalTo(\"142\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name": "equalTo(\"<p>家具臨時存倉保障 <br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].coverageLimit": "equalTo(\"<p>50,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].sequenceId":"equalTo(\"143\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].name": "equalTo(\"<p>臨時居所<br>(每次事故最高30日)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].coverageLimit": "equalTo(\"<p>每日1,000</p>\")"
+
+
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with carpetArea 801 and  buildingAge 46",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 801,
+                "hasLoan": null,
+                "buildingAge": 46,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name":"equalTo(\"Silver\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[1].id":  "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name":  "equalTo(\"Platinum\")",
+            "data.insuredEntities.property.carpetArea":"notNullValue()",
+            "data.insuredEntities.property.buildingAge":"notNullValue()",
+            "data.preferences.currency": "equalTo(\"en\")",
+            "data.preferences.language":"equalTo(\"HKD\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>100,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId":"equalTo(\"102\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"<p>10,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].sequenceId":"equalTo(\"113\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"<p>金錢損失<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].sequenceId":"equalTo(\"114\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"<p>未經獲授權使用信用卡<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit": "equalTo(\"<p>2,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].sequenceId":"equalTo(\"121\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"<p>個人責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"<p>個人法律責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit": "equalTo(\"<p>4,000,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].sequenceId":"equalTo(\"131\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].coverageLimit": "equalTo(\"<p>不適用</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].sequenceId":"equalTo(\"141\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name": "equalTo(\"<p>臨時搬遷保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].coverageLimit": "equalTo(\"<p>75,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].sequenceId":"equalTo(\"142\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name": "equalTo(\"<p>家具臨時存倉保障 <br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].coverageLimit": "equalTo(\"<p>50,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].sequenceId":"equalTo(\"143\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].name": "equalTo(\"<p>臨時居所<br>(每次事故最高30日)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].coverageLimit": "equalTo(\"<p>每日1,000</p>\")"
+
+
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with carpetArea 1201 and buildingAge 51",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 1201,
+                "hasLoan": null,
+                "buildingAge": 51,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name":"equalTo(\"Silver\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[1].id":  "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name":  "equalTo(\"Platinum\")",
+            "data.insuredEntities.property.carpetArea":"notNullValue()",
+            "data.insuredEntities.property.buildingAge":"notNullValue()",
+            "data.preferences.currency": "equalTo(\"en\")",
+            "data.preferences.language":"equalTo(\"HKD\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>100,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId":"equalTo(\"102\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"<p>10,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].sequenceId":"equalTo(\"113\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"<p>金錢損失<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].sequenceId":"equalTo(\"114\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"<p>未經獲授權使用信用卡<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit": "equalTo(\"<p>2,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].sequenceId":"equalTo(\"121\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"<p>個人責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"<p>個人法律責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit": "equalTo(\"<p>4,000,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].sequenceId":"equalTo(\"131\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].coverageLimit": "equalTo(\"<p>不適用</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].sequenceId":"equalTo(\"141\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name": "equalTo(\"<p>臨時搬遷保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].coverageLimit": "equalTo(\"<p>75,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].sequenceId":"equalTo(\"142\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name": "equalTo(\"<p>家具臨時存倉保障 <br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].coverageLimit": "equalTo(\"<p>50,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].sequenceId":"equalTo(\"143\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].name": "equalTo(\"<p>臨時居所<br>(每次事故最高30日)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].coverageLimit": "equalTo(\"<p>每日1,000</p>\")"
+
+
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with carpetArea 1800 and buildingAge 60",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 1800,
+                "hasLoan": null,
+                "buildingAge": 60,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name":"equalTo(\"Silver\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[1].id":  "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name":  "equalTo(\"Platinum\")",
+            "data.insuredEntities.property.carpetArea":"notNullValue()",
+            "data.insuredEntities.property.buildingAge":"notNullValue()",
+            "data.preferences.currency": "equalTo(\"en\")",
+            "data.preferences.language":"equalTo(\"HKD\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>100,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId":"equalTo(\"102\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"<p>10,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].sequenceId":"equalTo(\"113\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"<p>金錢損失<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].sequenceId":"equalTo(\"114\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"<p>未經獲授權使用信用卡<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit": "equalTo(\"<p>2,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].sequenceId":"equalTo(\"121\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"<p>個人責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"<p>個人法律責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit": "equalTo(\"<p>4,000,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].sequenceId":"equalTo(\"131\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].coverageLimit": "equalTo(\"<p>不適用</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].sequenceId":"equalTo(\"141\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name": "equalTo(\"<p>臨時搬遷保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].coverageLimit": "equalTo(\"<p>75,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].sequenceId":"equalTo(\"142\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name": "equalTo(\"<p>家具臨時存倉保障 <br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].coverageLimit": "equalTo(\"<p>50,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].sequenceId":"equalTo(\"143\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].name": "equalTo(\"<p>臨時居所<br>(每次事故最高30日)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].coverageLimit": "equalTo(\"<p>每日1,000</p>\")"
+
+
+
+
+          }
+        }
+      }
+    },
+
+
+    {
+      "Name": "Validate with carpetArea 1801 and buildingAge 60",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 1801,
+                "hasLoan": null,
+                "buildingAge": 60,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with carpetArea 1800 and buildingAge 61",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 1800,
+                "hasLoan": null,
+                "buildingAge": 61,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+
+
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with carpetArea 0 and buildingAge 0",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 0,
+                "hasLoan": null,
+                "buildingAge": 0,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+
+
+          }
+        }
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "Name": "Validate with carpetArea 501 and buildingAge 41",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "productCode": "ALZ-HK-HOM-v001",
+          "quoteRequestReferenceNo": "",
+          "channel": null,
+          "sessionId": "a3d0d43b-3ba3-4859-be9a-d05c0ffa31bb",
+          "quoteId": "",
+          "timestamp": "2025-06-26T10:25:33.443Z",
+          "insuranceCompanyCode": null,
+          "policyEffectiveDate": "2025-08-27",
+          "selectedPackageID": "",
+          "product": {
+            "id": null,
+            "version": null,
+            "category": null,
+            "promoCode": null,
+            "userSpecificDiscountFlag": null
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": null,
+            "planType": null,
+            "sumAssured": null,
+            "policyTerm": null,
+            "premiumTerm": null,
+            "premiumFrequency": null,
+            "paymentMethod": null,
+            "preferences": {
+              "currency": "en",
+              "language": "HKD"
+            },
+            "deductible": null,
+            "insuredPersons": [
+              {
+                "insuredPersonsId": null,
+                "personalDetails": null,
+                "otherBenefits": [
+                  {
+                    "id": "",
+                    "sequenceId": null,
+                    "name": null,
+                    "description": null,
+                    "information": null,
+                    "groupName": null,
+                    "isSelected": true,
+                    "isInbuilt": null,
+                    "coverageLimit": null,
+                    "premium": null
+                  }
+                ],
+                "coverageExclusions": null,
+                "waitingPeriod": null,
+                "isMainPolicyHolder": null,
+                "underWritings": null
+              }
+            ],
+            "insuredEntities": {
+              "motor": null,
+              "travel": null,
+              "property": {
+                "propertyType": null,
+                "carpetArea": 501,
+                "hasLoan": null,
+                "buildingAge": 41,
+                "buildingLocation": null,
+                "bank": null
+              },
+              "medical": null,
+              "cyber": null,
+              "pet": null
+            }
+          },
+          "previousPolicyInfo": null,
+          "beneficiaryDetails": null,
+          "customizedParameters": null,
+          "consents": null
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].name":"equalTo(\"Silver\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[1].id":  "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Gold\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name":  "equalTo(\"Platinum\")",
+            "data.insuredEntities.property.carpetArea":"notNullValue()",
+            "data.insuredEntities.property.buildingAge":"notNullValue()",
+            "data.preferences.currency": "equalTo(\"en\")",
+            "data.preferences.language":"equalTo(\"HKD\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>100,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId":"equalTo(\"102\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupCoverageLimit":  "equalTo(\"<p>500,000</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"<p>10,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].sequenceId":"equalTo(\"113\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"<p>金錢損失<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit": "equalTo(\"<p>1,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].sequenceId":"equalTo(\"114\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"<p>未經獲授權使用信用卡<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"<p>全球綜合保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit": "equalTo(\"<p>2,500</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].sequenceId":"equalTo(\"121\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"<p>個人責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"<p>個人法律責任<br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit": "equalTo(\"<p>4,000,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].sequenceId":"equalTo(\"131\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName": "equalTo(\"<p>家電維修保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].coverageLimit": "equalTo(\"<p>不適用</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].sequenceId":"equalTo(\"141\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name": "equalTo(\"<p>臨時搬遷保障<br>(每保險期)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].coverageLimit": "equalTo(\"<p>75,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].sequenceId":"equalTo(\"142\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name": "equalTo(\"<p>家具臨時存倉保障 <br>(每次事故)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].coverageLimit": "equalTo(\"<p>50,000</p>\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].sequenceId":"equalTo(\"143\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].name": "equalTo(\"<p>臨時居所<br>(每次事故最高30日)</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].groupName": "equalTo(\"<p>額外保障</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].isInbuilt": "equalTo(\"True\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[10].coverageLimit": "equalTo(\"<p>每日1,000</p>\")"
+
+
+
+
+          }
+        }
+      }
+    }
+  ]
+}

@@ -66,9 +66,9 @@
               "travel": null,
               "property": {
                 "propertyType": null,
-                "carpetArea": 500,
+                "carpetArea": 501,
                 "hasLoan": null,
-                "buildingAge": 0,
+                "buildingAge": 41,
                 "buildingLocation": null,
                 "bank": null
               },

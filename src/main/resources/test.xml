@@ -48,7 +48,15 @@
         </classes>
     </test>
 
-        <test name="Get Quote - Home">
+    <test name="Quick Quote - Home">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Quick_Quote.json"/>
+        <classes>
+            <class name="org.example.SCB_E2E"/>
+        </classes>
+    </test>
+
+
+    <test name="Get Quote - Home">
             <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote_Home.json"/>
             <classes>
                 <class name="org.example.SCB_E2E"/>
@@ -75,6 +83,14 @@
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
+
+<!--        <test name="practice ">-->
+<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/practice.json"/>-->
+<!--            <classes>-->
+<!--                <class name="org.example.SCB_E2E"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
 
 
 </suite>
