@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 */4 * * *'  # Runs every 4 hours (UTC)
   workflow_dispatch:       # Allows manual triggering from GitHub UI
+  push:
+    branches:
+      - SCB-middleware-API-Automation-V2
 
 jobs:
   test:
@@ -37,6 +40,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload Extent Reports to Artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Custom-reports
