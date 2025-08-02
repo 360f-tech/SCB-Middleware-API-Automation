@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 */4 * * *'  # Runs every 4 hours (UTC)
   workflow_dispatch:       # Allows manual triggering from GitHub UI
-  push:
-    branches:
-      - SCB-middleware-API-Automation-V2
 
 jobs:
   test:
@@ -36,11 +33,10 @@ jobs:
           mvn clean install -DskipTests
 
       - name: Build with Maven and execute API scripts
-        run: mvn clean install -Dsurefire.suiteXmlFiles=src/test/resources/test.xml
+        run: mvn clean install test -DtestSuite="test.xml" --file pom.xml
         continue-on-error: true
 
       - name: Upload Extent Reports to Artifacts
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Custom-reports
