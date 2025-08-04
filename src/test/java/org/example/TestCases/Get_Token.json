@@ -1,5 +1,5 @@
 {
-  "name": "360F-Get Token",
+  "name": "Get Token",
   "Test": [
     {
       "Name": "Get Token",
@@ -12,15 +12,19 @@
           "grant_type": "client_credentials"
         }
       },
-        "Response": {
-          "statusCode": 200,
-          "validator": {
-            "body_validator": {
-              "token_type": "equalTo(Bearer)"
-            }
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "access_token": "notNullValue()",
+            "token_type": "equalTo(Bearer)"
+
           }
         }
-
+      },
+      "Extract": {
+        "${access_token}": "access_token"
+      }
     }
   ]
 }
