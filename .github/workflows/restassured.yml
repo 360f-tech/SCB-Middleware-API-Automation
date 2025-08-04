@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: 360f-tech/Core_360f_API_Automation
+          ref: base-api-frameworkV2
           path: 360f-tech
 
           token: ${{ secrets.PAT }}
