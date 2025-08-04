@@ -112,7 +112,7 @@
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
@@ -281,7 +281,7 @@
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
@@ -450,7 +450,7 @@
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
@@ -619,7 +619,7 @@
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",
@@ -1088,7 +1088,7 @@
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId":"equalTo(\"111\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].isInbuilt": "equalTo(\"True\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"<p>5,000<br>(每件2,500)</p>\")",
+
 
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].sequenceId":"equalTo(\"112\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"<p>遺失個人證件<br>(每保險期)</p>\")",

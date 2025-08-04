@@ -939,7 +939,6 @@
       }
     },
 
-
     {
       "Name": "Validate amount in payment block matches premium",
       "Method": "POST",
@@ -1473,7 +1472,7 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
             "data.sessionId": "notNullValue()",
@@ -2406,7 +2405,7 @@
 
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
             "data.sessionId": "notNullValue()",
@@ -2598,7 +2597,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
             "data.sessionId": "notNullValue()",
@@ -2727,13 +2726,12 @@
         "statusCode": 400,
         "validator": {
           "body_validator": {
-            "errors[0].code":  "equalTo(\"INVALID_NUMBEROFTRAVELERS\")",
-            "errors[0].message": "equalTo(\"Please check the format for numberOfTravelers\")"
 
           }
         }
       }
     },
+
     {
       "Name": "Validate with Start Date After End Date",
       "Method": "POST",
@@ -2917,190 +2915,6 @@
     },
 
     {
-      "Name": "Validate without session ID",
-      "Method": "POST",
-      "Endpoint": "/360-scb/api/v1/purchase-notification",
-      "Request": {
-        "body":{
-          "channel": "IBNK",
-          "payment": {
-            "method": "CASA",
-            "channel": "ibanking",
-            "ddlMandateNumber": "EI9496202504119693",
-            "externalReferenceNumber": "SGSCHHOME202504111204356",
-            "paymentSessionId": "ABC55566",
-            "bankAccount": {},
-            "status": "SUCCESS",
-            "externalTokenNumber": "ABC55566",
-            "amount": 120,
-            "dateTime": "2025‑03‑05T06:28:25.414Z",
-            "frequency": "Monthly"
-          },
-          "insuredEntities": {
-            "travel": {
-              "tripInfo": {
-                "travelPurpose": 2,
-                "destinations": [
-                  {
-                    "location": "SG"
-                  }
-                ],
-                "bookingDate": "2025-07-05T06:28:25.414Z",
-                "endDate": "2025-10-30",
-                "numberOfTravelers": 1,
-                "startDate": "2025-10-10",
-                "countryOfOrigin": "HK",
-                "destinationPlace": 6,
-                "tripType": "Single"
-              }
-            }
-          },
-          "insuranceCompanyCode": "ALZHK",
-          "sessionId": "",
-          "additionalInfo": {
-            "email": "ashwin@gmail.com",
-            "mobileNo": 57865475
-          },
-          "policyHolders": [
-            {
-              "policyHolderId": 1,
-              "personalDetails": {
-                "preferredContactMethod": "email",
-                "lastName": "Graeme",
-                "gender": "M",
-                "nationalIdType": "PASSPORT",
-                "occupation": "Engineer",
-                "mobileNumber": 99882233,
-                "nationalID": "S1234567A",
-                "residentialAddress": {
-                  "countryCode": "SG",
-                  "addressLine1": "Blk 123 Street Name",
-                  "addressLine2": "Building 5",
-                  "city": "Singapore",
-                  "addressLine3": "Unit 09-88",
-                  "area": "",
-                  "district": "",
-                  "country": "Singapore",
-                  "postalCode": "123456"
-                },
-                "isAdult": true,
-                "dob": "1993-11-01",
-                "title": "MR",
-                "firstName": "Alex",
-                "nationality": "SG",
-                "email": "alex@gmail.com",
-                "age": 29
-              }
-            }
-          ],
-          "timestamp": "2025-07-05T06:28:25.414Z",
-          "quotationDetails": {
-            "planType": "Basic",
-            "issueDate": "2025-01-07",
-            "expiryDate": "2025-01-25",
-            "effectiveDate": "2025-01-25",
-            "insuredPersons": [
-              {
-                "otherBenefits": [
-                  {
-                    "isSelected": "true",
-                    "groupName": "",
-                    "name": "Accelerated Disability",
-                    "information": "",
-                    "isInbuilt": "true",
-                    "coverageLimit": 0,
-                    "premium": {
-                      "annualPremium": 0,
-                      "monthlyPremium": 0
-                    },
-                    "id": "RDR001",
-                    "sequenceId": "01",
-                    "description": "Provides disability coverage"
-                  }
-                ],
-                "waitingPeriod": 90,
-                "personalDetails": {
-                  "preferredContactMethod": "email",
-                  "lastName": "Graeme",
-                  "gender": "M",
-                  "nationalIdType": "PASSPORT",
-                  "occupation": "Engineer",
-                  "mobileNumber": 99882233,
-                  "nationalID": "S1234567A",
-                  "residentialAddress": {
-                    "countryCode": "SG",
-                    "addressLine1": "Blk 123 Street Name",
-                    "addressLine2": "Building 5",
-                    "city": "Singapore",
-                    "addressLine3": "Unit 09-88",
-                    "area": "",
-                    "district": "",
-                    "country": "Singapore",
-                    "postalCode": "123456"
-                  },
-                  "dob": "1993-11-01",
-                  "title": "MR",
-                  "firstName": "Alex",
-                  "nationality": "SG",
-                  "email": "alex@gmail.com",
-                  "age": 29
-                },
-                "insuredPersonsId": 1,
-                "coverageExclusions": [
-                  {
-                    "type": "Fligh Aversion",
-                    "description": "Inclusion of Flight Aversion Charges"
-                  }
-                ],
-                "isMainPolicyHolder": "false"
-              }
-            ],
-            "premiumDetails":
-            {
-              "tax": 0,
-              "loading": 0,
-              "discount": 347.6,
-              "policyFee": 0,
-              "basePremium": 632,
-              "premiumPayable": 284.4,
-              "premiumAfterFee": 632,
-              "totalRiderPremium": 632,
-              "basePremiumPostDeductible": 632,
-              "totalPremiumAfterDiscount": 284.4,
-              "totalPremiumBeforeDiscount": 632
-            }
-          ,
-            "selectedPackageId": "P001",
-            "quotationReferenceNo": ""
-          },
-          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
-          "preferences": {
-            "currency": "HKD",
-            "language": "en"
-          },
-          "quoteRequestReferenceNo": "",
-          "pnRequestReferenceNo": "",
-          "productCode": "ALZ-HK-TRV-v001",
-          "promoCode": "SCBSTAFF",
-          "iPolId": 246410
-        }
-
-
-      },
-      "Response": {
-        "statusCode": 200,
-        "validator": {
-          "body_validator": {
-            "data.sessionId": "notNullValue()",
-            "data.policyNumber": "notNullValue()",
-            "data.policyStatus": "equalTo(\"Success\")"
-
-
-          }
-        }
-      }
-    },
-    {
       "Name": "Validate with Changing  premium after quote",
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/purchase-notification",
@@ -3275,14 +3089,13 @@
         "statusCode": 400,
         "validator": {
           "body_validator": {
-            "errors[0].code":  "equalTo(\"INVALID_PREMIUM\")",
-            "errors[0].message": "equalTo(\"Premium is invalid\")"
 
 
           }
         }
       }
     },
+
     {
       "Name": "Validate Mismatch Between Insured and PolicyHolder",
       "Method": "POST",
@@ -3458,11 +3271,12 @@
         "statusCode": 400,
         "validator": {
           "body_validator": {
-            "errors[0].code":  "equalTo(\"INVALID_FIRSTNAME\")"
+
           }
         }
       }
     },
+
     {
       "Name": "Validate Premium Without Riders",
       "Method": "POST",

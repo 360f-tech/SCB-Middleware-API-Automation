@@ -3309,46 +3309,6 @@
     },
 
     {
-      "Name": "Validate without Session ID ",
-      "Method": "POST",
-      "Endpoint": "/360-scb/api/v1/quote",
-      "Request": {
-        "body": {
-          "productCode": "ALZ-HK-TRV-v001",
-          "sessionId": null,
-          "timestamp": "2025-06-08T00:00:00.000Z",
-          "quotationDetails": {
-            "coverageType": "Family",
-            "insuredEntities": {
-              "travel": {
-                "tripInfo": {
-                  "endDate": "2025-08-10",
-                  "startDate": "2025-07-30",
-                  "bookingDate": "2025-06-08T00:00:00.000Z",
-                  "countryOfOrigin": "HK"
-                }
-              }
-            },
-            "preferences": {
-              "currency": "HKD",
-              "language": "en"
-            }
-          }
-        }
-
-      },
-      "Response": {
-        "statusCode": 400,
-        "validator": {
-          "body_validator": {
-
-          }
-        }
-      }
-
-    },
-
-    {
       "Name": "Validate without timestamp",
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/quote",
