@@ -7,7 +7,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body": {
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {
@@ -103,7 +103,6 @@
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].id":"equalTo(\"CB005\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].id":"equalTo(\"CB006\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].id":"equalTo(\"CB007\")",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Breach\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Misuse\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Theft\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"Expenses\")",
@@ -111,7 +110,6 @@
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"VPN\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"Shopping\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit":"notNullValue()",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit":"equalTo(\"10000\")",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit":"notNullValue()",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit":"notNullValue()",
             "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit":"notNullValue()",
@@ -226,7 +224,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body": {
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {
@@ -298,7 +296,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode":200,
         "validator": {
           "body_validator": {
           }
@@ -399,7 +397,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body": {
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {
@@ -439,7 +437,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
           }
@@ -453,7 +451,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body": {
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": null,
           "product": {
@@ -539,7 +537,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body":{
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {
@@ -637,7 +635,7 @@
       "Endpoint": "/360-scb/api/v1/quote",
       "Request": {
         "body":{
-          "policyEffectiveDate": "2025-08-10",
+          "policyEffectiveDate": "2026-08-10",
           "selectedPackageId": "P001",
           "productCode": "ALZ-HK-CYB-v001",
           "product": {

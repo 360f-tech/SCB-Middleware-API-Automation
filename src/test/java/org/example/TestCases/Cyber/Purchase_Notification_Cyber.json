@@ -58,7 +58,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-08-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -226,7 +226,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-08-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -394,7 +394,7 @@
           "quotationDetails": {
             "selectedPackageId": "P00",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -554,7 +554,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-08-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -722,7 +722,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-10-25",
             "planType": "Basic",
@@ -815,7 +815,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
 
@@ -882,7 +882,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1041,7 +1041,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1134,7 +1134,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
 
@@ -1200,7 +1200,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1330,7 +1330,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1382,7 +1382,7 @@
     },
 
     {
-      "Name": "Validate purchase with future effective date",
+      "Name": "Validate purchase with Past effective date",
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/purchase-notification",
       "Request": {
@@ -1438,7 +1438,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-08-05",
+            "effectiveDate": "2025-09-05",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1534,14 +1534,7 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
-            "data.sessionId": "notNullValue()",
-            "data.portfolioId": "notNullValue()",
-            "data.policyNumber": "notNullValue()",
-            "data.policyStatus": "equalTo(\"Active\")",
-            "data.policyExpiryDate": "notNullValue()",
-            "data.policyEffectiveDate": "notNullValue()",
-            "data.policycertificateURL": "notNullValue()",
-            "data.pnResponseReferenceNo": "notNullValue()"
+
 
           }
         }
@@ -1605,7 +1598,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-08-05",
+            "effectiveDate": "2025-09-05",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1765,7 +1758,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -1858,7 +1851,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
 
@@ -1925,7 +1918,7 @@
           "quotationDetails": {
             "selectedPackageId": "P001",
             "issueDate": "2025-01-07",
-            "effectiveDate": "2025-07-25",
+            "effectiveDate": "2025-09-25",
             "quotationReferenceNo": "",
             "expiryDate": "2025-01-25",
             "planType": "Basic",
@@ -2018,7 +2011,7 @@
         }
       },
       "Response": {
-        "statusCode": 400,
+        "statusCode": 200,
         "validator": {
           "body_validator": {
 

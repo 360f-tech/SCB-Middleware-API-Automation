@@ -83,14 +83,4 @@
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
-
-<!--        <test name="practice ">-->
-<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/practice.json"/>-->
-<!--            <classes>-->
-<!--                <class name="org.example.SCB_E2E"/>-->
-<!--            </classes>-->
-<!--        </test>-->
-
-
-
 </suite>

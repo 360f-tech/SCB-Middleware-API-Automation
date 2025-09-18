@@ -107,7 +107,7 @@
           "quoteId": null,
           "timestamp": "2025-07-28T17:54:51.380Z",
           "insuranceCompanyCode": null,
-          "policyEffectiveDate": "2025-08-30",
+          "policyEffectiveDate": "2025-11-30",
           "selectedPackageId": "P002",
           "product": {
             "id": null,
@@ -184,6 +184,7 @@
         "${iPolId}": "data.iPolId"
       }
     },
+
     {
       "Name": "Purchase Notification for Home",
       "Method": "POST",

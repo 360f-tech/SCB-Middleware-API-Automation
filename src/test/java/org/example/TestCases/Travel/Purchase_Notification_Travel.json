@@ -10,7 +10,7 @@
           "channel": "IBNK",
           "insuranceCompanyCode": "ALZHK",
           "productCode": "ALZ-HK-TRV-v001",
-          "policyEffectiveDate": "2025-08-27",
+          "policyEffectiveDate": "2025-09-27",
           "selectedPackageId": "",
           "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
           "quoteRequestReferenceNo": "",
@@ -477,7 +477,7 @@
             "planType": "Basic",
             "issueDate": "2025-01-07",
             "expiryDate": "2025-01-25",
-            "effectiveDate": "2025-01-25",
+            "effectiveDate": "2025-09-25",
             "insuredPersons": [
               {
                 "otherBenefits": [
