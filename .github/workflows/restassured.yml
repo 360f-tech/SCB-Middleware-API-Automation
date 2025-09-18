@@ -1,10 +1,9 @@
 name: Run Rest Assured Tests Every 4 Hours
 
 on:
-  push:
-    branches:
-      - SCB-middleware-API-Automation-V2
-
+    workflow_dispatch:       # Allows manual triggering from GitHub UI
+    schedule:
+      - cron: '0 */6 * * *'   # Every 6 hours (at minute 0)
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -18,7 +17,8 @@ jobs:
         with:
           repository: 360f-tech/Core_360f_API_Automation
           path: 360f-tech
-          token: ${{ secrets.PAT}}
+
+          token: ${{ secrets.PAT }}
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -32,10 +32,14 @@ jobs:
         run: |
           cd 360f-tech
           mvn clean install -DskipTests
+      - name: Build with Maven and execute API scripts
+        run: mvn clean install test -DtestSuite="test.xml" --file pom.xml
 
-      - name: Run tests with Maven
-        run: mvn test
-
-      - name: Build with Maven and execute api scripts
-        run: mvn clean install -Dsurefire.suiteXmlFiles=src/test/resources/test.xml
         continue-on-error: true
+
+      - name: Upload Extent Reports to Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Custom-reports
+          path: test-output/react-report

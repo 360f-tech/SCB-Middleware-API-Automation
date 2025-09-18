@@ -10,193 +10,54 @@
           "channel": "IBNK",
           "insuranceCompanyCode": "ALZHK",
           "productCode": "ALZ-HK-TRV-v001",
-          "policyEffectiveDate": "2025-08-27",
+          "policyEffectiveDate": "2025-07-27",
           "selectedPackageId": "",
           "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
-          "quoteRequestReferenceNo": "",
           "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
           "timestamp": "2025-06-08T00:00:00.000Z",
           "product": {
-            "id": "TRVHK",
-            "name": "Travel Insurance",
-            "category": "Travel",
-            "promoCode": "SCBSTAFF",
-            "referralCode": "",
-            "userSpecificDiscountFlag": false
+            "promoCode": "SCBSTAFF"
           },
           "policyHolders": null,
           "quotationDetails": {
             "coverageType": "Family",
             "planType": "Basic",
-            "premiumTerm": 4,
-            "premiumFrequency": "Monthly",
-            "paymentMethod": "CreditCard",
             "insuredEntities": {
               "travel": {
-                "tripInfo":
-                {
-                  "endDate": "2025-10-30",
-                  "tripType": "Single",
-                  "startDate": "2025-10-10",
+                "tripInfo": {
+                  "endDate": "2025-08-10",
+                  "startDate": "2025-07-30",
                   "bookingDate": "2025-06-08T00:00:00.000Z",
                   "destinations": [
                     {
                       "location": "SG"
                     }
                   ],
-                  "travelPurpose": 1,
-                  "countryOfOrigin": "HK",
-                  "numberOfTravelers": 2,
-                  "destinationPlace": 6
-
+                  "countryOfOrigin": "HK"
                 }
               }
             },
-            "sumAssured": 500,
             "insuredPersons": [
               {
                 "insuredPersonId": 1,
                 "isMainPolicyHolder": true,
                 "personalDetails": {
-                  "preferredContactMethod": "email",
-                  "lastName": "Graeme",
-                  "gender": "M",
-                  "mobileNumber": "99882233",
-                  "nationalIdType": "NRIC",
-                  "occupation": "Engineer",
-                  "nationalId": "S1234567A",
-                  "isSmoker": true,
-                  "residentialAddress": {
-                    "countryCode": "SG",
-                    "addressLine1": "Blk 123 Street Name",
-                    "addressLine2": "Building 5",
-                    "city": "Singapore",
-                    "addressLine3": "Unit 09-88",
-                    "area": "",
-                    "district": "",
-                    "country": "Singapore",
-                    "postalCode": "123456"
-                  },
-                  "isAdult": true,
-                  "dob": "1993-11-01",
-                  "title": "MR",
-                  "firstName": "Alex",
-                  "nationality": "SG",
-                  "email": "alex@gmail.com",
-                  "age": 31
-                },
-                "otherBenefits": [
-                  {
-                    "isSelected": false,
-                    "groupName": "",
-                    "name": "Emergency Dental Expenses",
-                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
-                    "coverageLimit": 0,
-                    "premium": {
-                      "annualPremium": 0,
-                      "monthlyPremium": 0
-                    },
-                    "id": "RDR001",
-                    "sequenceId": "01",
-                    "description": ""
-                  },
-                  {
-                    "isSelected": true,
-                    "groupName": "",
-                    "name": "Flight Diversion",
-                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
-                    "coverageLimit": 0,
-                    "premium": {
-                      "annualPremium": 0,
-                      "monthlyPremium": 0
-                    },
-                    "id": "RDR002",
-                    "sequenceId": "02",
-                    "description": ""
-                  }
-                ]
+                  "isAdult": true
+                }
               },
               {
                 "insuredPersonId": 2,
                 "isMainPolicyHolder": false,
                 "personalDetails": {
-                  "preferredContactMethod": "email",
-                  "lastName": "Graeme",
-                  "gender": "M",
-                  "mobile": "99882233",
-                  "nationalIdType": "NRIC",
-                  "occupation": "Engineer",
-                  "nationalId": "S1234567A",
-                  "isSmoker": true,
-                  "residentialAddress": {
-                    "countryCode": "SG",
-                    "addressLine1": "Blk 123 Street Name",
-                    "addressLine2": "Building 5",
-                    "city": "Singapore",
-                    "addressLine3": "Unit 09-88",
-                    "area": "",
-                    "district": "",
-                    "country": "Singapore",
-                    "postalCode": "123456"
-                  },
-                  "isAdult": true,
-                  "dob": "1993-11-01",
-                  "title": "MR",
-                  "firstName": "Alex",
-                  "nationality": "SG",
-                  "email": "alex@gmail.com",
-                  "age": 31
-                },
-                "otherBenefits": [
-                  {
-                    "isSelected": false,
-                    "groupName": "",
-                    "name": "Emergency Dental Expenses",
-                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
-                    "coverageLimit": 0,
-                    "premium": {
-                      "annualPremium": 0,
-                      "monthlyPremium": 0
-                    },
-                    "id": "RDR001",
-                    "sequenceId": "01",
-                    "description": ""
-                  },
-                  {
-                    "isSelected": true,
-                    "groupName": "",
-                    "name": "Flight Diversion",
-                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
-                    "coverageLimit": 0,
-                    "premium": {
-                      "annualPremium": 0,
-                      "monthlyPremium": 0
-                    },
-                    "id": "RDR002",
-                    "sequenceId": "02",
-                    "description": ""
-                  }
-                ]
+                  "isAdult": true
+                }
               }
-
             ],
-            "deductible": 200,
             "preferences": {
               "currency": "HKD",
               "language": "en"
-            },
-            "policyTerm": 25
-          },
-          "consents": [
-            {
-              "consentType": "Advertisement with message",
-              "hasAccepted": false
-            },
-            {
-              "consentType": "Advertisement with email",
-              "hasAccepted": false
             }
-          ]
+          }
         }
 
 
@@ -205,16 +66,67 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(\"101\")",
+
             "data.quoteId":"notNullValue()",
-            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "notNullValue()",
-            "data.packages[0].id":"notNullValue()",
-            "data.packages[0].name":"containsString(\"Single Trip\")",
-            "data.sessionId":"notNullValue()",
-            "data.preferences.language":"notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.basePlanCode": "equalTo(\"HM_GQ_RES_MAP\")",
+            "data.policyContent": "notNullValue()",
+            "data.preferences.currency": "equalTo(\"HKD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.product.promoCode":  "equalTo(\"SCBSTAFF\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"Single Trip - Gold Plan\")",
+            "data.packages[1].id": "equalTo(\"P002\")",
+            "data.packages[1].name": "equalTo(\"Single Trip - Platinum Plan\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[2].name": "equalTo(\"Annual - Gold Plan\")",
+            "data.packages[3].id": "equalTo(\"P004\")",
+            "data.packages[3].name": "equalTo(\"Annual - Platinum Plan\")",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium":"notNullValue()",
             "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
-            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount":"notNullValue()",
-            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount":"notNullValue()"
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium":"notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()",
+
+            "data.packages[1].quotation.premiumDetails.annualPremium.discount":"notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.policyFee": "notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremium":"notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumAfterFee":"notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalRiderPremium":"notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()",
+
+            "data.packages[2].quotation.premiumDetails.annualPremium.discount":"notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.policyFee": "notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.basePremium":"notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumAfterFee":"notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.totalRiderPremium":"notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
+            "data.packages[2].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()",
+
+            "data.packages[3].quotation.premiumDetails.annualPremium.discount":"notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.policyFee": "notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.basePremium":"notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.premiumPayable":"notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.premiumAfterFee":"notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.totalRiderPremium":"notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "notNullValue()",
+            "data.packages[3].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "notNullValue()",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Follow-up Medical Expenses\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].description":  "equalTo(\"<p>Follow-up medical expenses up to 3 months after return to Hong Kong</p>\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName":  "equalTo(\"Medical Expenses\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"<p>HKD&nbsp;50,000</p>\")"
           }
         }
       }
@@ -225,7 +137,7 @@
       "Method": "POST",
       "Endpoint": "/360-scb/api/v1/purchase-notification",
       "Request": {
-        "body": {
+        "body":{
           "channel": "IBNK",
           "payment": {
             "method": "CASA",
@@ -363,14 +275,14 @@
             {
               "tax": 0,
               "loading": 0,
-              "discount": 379.2,
+              "discount": 347.6,
               "policyFee": 0,
               "basePremium": 632,
-              "premiumPayable": 252.8,
+              "premiumPayable": 284.4,
               "premiumAfterFee": 632,
               "totalRiderPremium": 632,
               "basePremiumPostDeductible": 632,
-              "totalPremiumAfterDiscount": 252.8,
+              "totalPremiumAfterDiscount": 284.4,
               "totalPremiumBeforeDiscount": 632
             }
           ,
@@ -393,8 +305,9 @@
         "statusCode": 200,
         "validator": {
           "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
             "data.policyStatus": "equalTo(\"Success\")"
-
           }
         }
       }

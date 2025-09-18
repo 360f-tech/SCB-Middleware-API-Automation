@@ -1,0 +1,730 @@
+{
+  "name": "Get Quote - Cyber",
+  "Test": [
+    {
+      "Name": "Valid Get Quote Request",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.category": "equalTo(\"Cyber\")",
+            "data.product.name": "equalTo(\"Cyber Insurance\")",
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].quotation.issueDate": "notNullValue()",
+            "data.packages[0].quotation.effectiveDate": "notNullValue()",
+            "data.packages[0].quotation.expiryDate": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "notNullValue()",
+            "data.packages[0].name": "equalTo(\"Standard\")",
+            "data.packages[0].description": "equalTo(\"Protect your digital life from cyber threats\")",
+            "data.policyContent": "notNullValue()",
+            "data.packages[0].recommended": "notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].isInbuilt": "notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"CB001\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"CB002\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id":"equalTo(\"CB003\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].id":"equalTo(\"CB004\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].id":"equalTo(\"CB005\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].id":"equalTo(\"CB006\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].id":"equalTo(\"CB007\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Misuse\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Theft\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName": "equalTo(\"Expenses\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName": "equalTo(\"Cyber\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName": "equalTo(\"VPN\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName": "equalTo(\"Shopping\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].coverageLimit":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].description":"notNullValue()",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].description":"notNullValue()"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Valid Missing policyEffectiveDate",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": null,
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].message": "equalTo(\"policyEffectiveDate cannot be blank\")"
+
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Invalid DOB (Future Date)",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "2026-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode":200,
+        "validator": {
+          "body_validator": {
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Past Effective Date",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": "2024-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].message": "equalTo(\"policyEffectiveDate cannot be in past\")"
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Missing Policy Holder",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Missing Missing Product Code",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": null,
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate without Quote ID",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":{
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": "",
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": null,
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.category": "equalTo(\"Cyber\")",
+            "data.product.name": "equalTo(\"Cyber Insurance\")",
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].quotation.issueDate": "notNullValue()",
+            "data.packages[0].quotation.effectiveDate": "notNullValue()",
+            "data.packages[0].quotation.expiryDate": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "notNullValue()",
+            "data.packages[0].name": "equalTo(\"Standard\")",
+            "data.packages[0].description": "equalTo(\"Protect your digital life from cyber threats\")",
+            "data.policyContent": "notNullValue()"
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Remove Deductible",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":{
+          "policyEffectiveDate": "2026-08-10",
+          "selectedPackageId": "P001",
+          "productCode": "ALZ-HK-CYB-v001",
+          "product": {
+            "ID": "IA02",
+            "name": "Cyber Insurance",
+            "category": "Cyber",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": "False"
+          },
+          "insuranceCompanyCode": "MSIG",
+          "sessionId": "f7d9a8b3-c2e4-4f6d-9e1a-b5c8d7f3a2d1",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "mobile": "99882233",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S1234567a",
+                "isSmoker": false,
+                "residentialAddress": {
+                  "countryCode": "DE",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "Kowloon",
+                  "district": "North district",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025/06/18T14:02:12.104Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "deductible": null,
+            "preferences": {
+              "currency": "HKD",
+              "language": "EN"
+            },
+            "paymentMethod": "credit Card",
+            "policyContent": "",
+            "insuredPersons": [],
+            "insuredEntities": {
+              "cyber": {}
+            }
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": "True"
+            }
+          ],
+          "quoteRequestReferenceNo": ""
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.category": "equalTo(\"Cyber\")",
+            "data.product.name": "equalTo(\"Cyber Insurance\")",
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].quotation.issueDate": "notNullValue()",
+            "data.packages[0].quotation.effectiveDate": "notNullValue()",
+            "data.packages[0].quotation.expiryDate": "notNullValue()",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "notNullValue()",
+            "data.packages[0].name": "equalTo(\"Standard\")",
+            "data.packages[0].description": "equalTo(\"Protect your digital life from cyber threats\")",
+            "data.policyContent": "notNullValue()"
+          }
+        }
+      }
+    }
+  ]
+}

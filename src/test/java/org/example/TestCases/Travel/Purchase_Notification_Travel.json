@@ -1,0 +1,3463 @@
+{
+  "name": "Purchase-Notification-Travel",
+  "Test": [
+    {
+      "Name": "Get Quote",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "insuranceCompanyCode": "ALZHK",
+          "productCode": "ALZ-HK-TRV-v001",
+          "policyEffectiveDate": "2025-09-27",
+          "selectedPackageId": "",
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "quoteRequestReferenceNo": "",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "product": {
+            "id": "TRVHK",
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "policyHolders": null,
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Monthly",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "endDate": "2025-10-30",
+                  "tripType": "single",
+                  "startDate": "2025-10-10",
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "destinations": [
+                    { "location": "SG" },
+                    { "location": "MY" },
+                    { "location": "TH" },
+                    { "location": "JP" }
+                  ],
+                  "travelPurpose": 1,
+                  "countryOfOrigin": "HK",
+                  "numberOfTravelers": 2,
+                  "destinationPlace": 6
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobileNumber": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              },
+              {
+                "insuredPersonId": 2,
+                "isMainPolicyHolder": false,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S1234567A",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 31
+                },
+                "otherBenefits": [
+                  {
+                    "isSelected": false,
+                    "groupName": "",
+                    "name": "Emergency Dental Expenses",
+                    "Information": "Emergency Dental covers all the Emergency dental issues incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": ""
+                  },
+                  {
+                    "isSelected": true,
+                    "groupName": "",
+                    "name": "Flight Diversion",
+                    "Information": "Flight Diversion covered in all the flights incurred during the tenure of the trip for the insured person",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR002",
+                    "sequenceId": "02",
+                    "description": ""
+                  }
+                ]
+              }
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "consents": [
+            {
+              "consentType": "Advertisement with message",
+              "hasAccepted": false
+            },
+            {
+              "consentType": "Advertisement with email",
+              "hasAccepted": false
+            }
+          ]
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.name": "equalTo(\"Travel Insurance\")",
+            "data.product.category":"equalTo(\"Travel\")",
+            "data.quoteId":"notNullValue()",
+            "data.sessionId":"notNullValue()",
+            "data.product.id": "equalTo(\"TRVHK\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate monthly premium payment is accepted",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-MONTHLY-0001",
+            "paymentSessionId": "SESSION98765",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "TOKEN98765",
+            "amount": 284.4,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "MY"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Missing quoteId",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-TEST-0001",
+            "paymentSessionId": "SESSION99999",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "TOKEN99999",
+            "amount": 284.4,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "MY"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-09-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 0,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 632,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 0,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 632,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "INVALID123",
+          "iPolId": 246410
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Invalid quoteId quoteId",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-TEST-0001",
+            "paymentSessionId": "SESSION99999",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "TOKEN99999",
+            "amount": 284.4,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "MY"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 0,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 632,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 0,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 632,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": "RANDOM-ID-123"
+          },
+          "quoteId": "",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "INVALID123",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Payment Failed",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-TEST-0001",
+            "paymentSessionId": "SESSION99999",
+            "bankAccount": {},
+            "status": "FAILED",
+            "externalTokenNumber": "TOKEN99999",
+            "amount": 284.4,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "MY"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 0,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 632,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 0,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 632,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": "RANDOM-ID-123"
+          },
+          "quoteId": "",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "INVALID123",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate amount in payment block matches premium",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-TEST-TC09",
+            "paymentSessionId": "SESSION-TC09",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "TOKEN-TC09",
+            "amount": 300.0,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  { "location": "MY" }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Multiple Destinations",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "TRX-TC11-0001",
+            "paymentSessionId": "SESSION-TC11",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "TOKEN-TC11",
+            "amount": 284.4,
+            "dateTime": "2025-07-15T10:00:00.000Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  { "location": "SG" },
+                  { "location": "MY" },
+                  { "location": "TH" }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "MY",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "MY",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-15T10:00:00.000Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "MY",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "MY",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Flight Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with numberOfTravelers = 0",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 0,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Booking Date in Past",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2023-12-01T06:00:00.000Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Typo in Coverage Exclusion",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2023-12-01T06:00:00.000Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Send 2 insured persons with valid details",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 240,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 2,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "true"
+              },
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Smith",
+                  "gender": "F",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Teacher",
+                  "mobileNumber": 99884455,
+                  "nationalID": "S2234567B",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Street Name",
+                    "addressLine2": "Building 2",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 10-11",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "654321"
+                  },
+                  "dob": "1992-07-15",
+                  "title": "MS",
+                  "firstName": "Emily",
+                  "nationality": "SG",
+                  "email": "emily@gmail.com",
+                  "age": 32
+                },
+                "insuredPersonsId": 2,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 695.2,
+              "policyFee": 0,
+              "basePremium": 1264,
+              "premiumPayable": 568.8,
+              "premiumAfterFee": 1264,
+              "totalRiderPremium": 1264,
+              "basePremiumPostDeductible": 1264,
+              "totalPremiumAfterDiscount": 568.8,
+              "totalPremiumBeforeDiscount": 1264
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Different Nationality and Destination ",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 240,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 2,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "IN",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "IN",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "true"
+              },
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Smith",
+                  "gender": "F",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Teacher",
+                  "mobileNumber": 99884455,
+                  "nationalID": "S2234567B",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Street Name",
+                    "addressLine2": "Building 2",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 10-11",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "654321"
+                  },
+                  "dob": "1992-07-15",
+                  "title": "MS",
+                  "firstName": "Emily",
+                  "nationality": "IN",
+                  "email": "emily@gmail.com",
+                  "age": 32
+                },
+                "insuredPersonsId": 2,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 695.2,
+              "policyFee": 0,
+              "basePremium": 1264,
+              "premiumPayable": 568.8,
+              "premiumAfterFee": 1264,
+              "totalRiderPremium": 1264,
+              "basePremiumPostDeductible": 1264,
+              "totalPremiumAfterDiscount": 568.8,
+              "totalPremiumBeforeDiscount": 1264
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Missing Payment Info",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 2,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "IN",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "IN",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "true"
+              },
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Smith",
+                  "gender": "F",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Teacher",
+                  "mobileNumber": 99884455,
+                  "nationalID": "S2234567B",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Street Name",
+                    "addressLine2": "Building 2",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 10-11",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "654321"
+                  },
+                  "dob": "1992-07-15",
+                  "title": "MS",
+                  "firstName": "Emily",
+                  "nationality": "IN",
+                  "email": "emily@gmail.com",
+                  "age": 32
+                },
+                "insuredPersonsId": 2,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 695.2,
+              "policyFee": 0,
+              "basePremium": 1264,
+              "premiumPayable": 568.8,
+              "premiumAfterFee": 1264,
+              "totalRiderPremium": 1264,
+              "basePremiumPostDeductible": 1264,
+              "totalPremiumAfterDiscount": 568.8,
+              "totalPremiumBeforeDiscount": 1264
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Invalid Payment Amount Type",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": "ABC",
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 2,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "IN",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "IN",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "true"
+              },
+              {
+                "otherBenefits": [],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Smith",
+                  "gender": "F",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Teacher",
+                  "mobileNumber": 99884455,
+                  "nationalID": "S2234567B",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 456 Street Name",
+                    "addressLine2": "Building 2",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 10-11",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "654321"
+                  },
+                  "dob": "1992-07-15",
+                  "title": "MS",
+                  "firstName": "Emily",
+                  "nationality": "IN",
+                  "email": "emily@gmail.com",
+                  "age": 32
+                },
+                "insuredPersonsId": 2,
+                "coverageExclusions": [],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 695.2,
+              "policyFee": 0,
+              "basePremium": 1264,
+              "premiumPayable": 568.8,
+              "premiumAfterFee": 1264,
+              "totalRiderPremium": 1264,
+              "basePremiumPostDeductible": 1264,
+              "totalPremiumAfterDiscount": 568.8,
+              "totalPremiumBeforeDiscount": 1264
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Empty Insured Persons",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-03-05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 2,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "IN",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 695.2,
+              "policyFee": 0,
+              "basePremium": 1264,
+              "premiumPayable": 568.8,
+              "premiumAfterFee": 1264,
+              "totalRiderPremium": 1264,
+              "basePremiumPostDeductible": 1264,
+              "totalPremiumAfterDiscount": 568.8,
+              "totalPremiumBeforeDiscount": 1264
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Start Date After End Date",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025‑03‑05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-10",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-30",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails": {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            },
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+            "errors[0].code":  "equalTo(\"INVALID_STARTDATE\")",
+            "errors[0].message": "equalTo(\"Start date must be prior or equal to end date\")"
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate with Changing  premium after quote",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025‑03‑05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails":
+            {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            }
+          ,
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Mismatch Between Insured and PolicyHolder",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025‑03‑05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails":
+            {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            }
+          ,
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Validate Premium Without Riders",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {},
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025‑03‑05T06:28:25.414Z",
+            "frequency": "Monthly"
+          },
+          "insuredEntities": {
+            "travel": {
+              "tripInfo": {
+                "travelPurpose": 2,
+                "destinations": [
+                  {
+                    "location": "SG"
+                  }
+                ],
+                "bookingDate": "2025-07-05T06:28:25.414Z",
+                "endDate": "2025-10-30",
+                "numberOfTravelers": 1,
+                "startDate": "2025-10-10",
+                "countryOfOrigin": "HK",
+                "destinationPlace": 6,
+                "tripType": "Single"
+              }
+            }
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "",
+          "additionalInfo": {
+            "email": "ashwin@gmail.com",
+            "mobileNo": 57865475
+          },
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Graeme",
+                "gender": "M",
+                "nationalIdType": "PASSPORT",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S1234567A",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1993-11-01",
+                "title": "MR",
+                "firstName": "Alex",
+                "nationality": "SG",
+                "email": "alex@gmail.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-05T06:28:25.414Z",
+          "quotationDetails": {
+            "planType": "Basic",
+            "issueDate": "2025-01-07",
+            "expiryDate": "2025-01-25",
+            "effectiveDate": "2025-01-25",
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "isSelected": "true",
+                    "groupName": "",
+                    "name": "Accelerated Disability",
+                    "information": "",
+                    "isInbuilt": "true",
+                    "coverageLimit": 0,
+                    "premium": {
+                      "annualPremium": 0,
+                      "monthlyPremium": 0
+                    },
+                    "id": "RDR001",
+                    "sequenceId": "01",
+                    "description": "Provides disability coverage"
+                  }
+                ],
+                "waitingPeriod": 90,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Graeme",
+                  "gender": "M",
+                  "nationalIdType": "PASSPORT",
+                  "occupation": "Engineer",
+                  "mobileNumber": 99882233,
+                  "nationalID": "S1234567A",
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "dob": "1993-11-01",
+                  "title": "MR",
+                  "firstName": "Alex",
+                  "nationality": "SG",
+                  "email": "alex@gmail.com",
+                  "age": 29
+                },
+                "insuredPersonsId": 1,
+                "coverageExclusions": [
+                  {
+                    "type": "Fligh Aversion",
+                    "description": "Inclusion of Flight Aversion Charges"
+                  }
+                ],
+                "isMainPolicyHolder": "false"
+              }
+            ],
+            "premiumDetails":
+            {
+              "tax": 0,
+              "loading": 0,
+              "discount": 347.6,
+              "policyFee": 0,
+              "basePremium": 632,
+              "premiumPayable": 284.4,
+              "premiumAfterFee": 632,
+              "totalRiderPremium": 632,
+              "basePremiumPostDeductible": 632,
+              "totalPremiumAfterDiscount": 284.4,
+              "totalPremiumBeforeDiscount": 632
+            }
+          ,
+            "selectedPackageId": "P001",
+            "quotationReferenceNo": ""
+          },
+          "quoteId": "026A75DF-399E-4034-ADB209EF85FCC13C",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quoteRequestReferenceNo": "",
+          "pnRequestReferenceNo": "",
+          "productCode": "ALZ-HK-TRV-v001",
+          "promoCode": "SCBSTAFF",
+          "iPolId": 246410
+        }
+
+
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"Success\")"
+          }
+        }
+      }
+    }
+  ]
+}
