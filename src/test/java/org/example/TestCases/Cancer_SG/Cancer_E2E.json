@@ -1,0 +1,404 @@
+{
+  "name": "Cancer E2E",
+  "Test": [
+
+    {
+      "Name": "Quick Quote - Cancer",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-05",
+          "selectedPackageId": "",
+          "product": {
+            "id": 1003,
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[1].name": "equalTo(\"GOLD\")",
+            "data.packages[1].id": "equalTo(\"P002\")",
+            "data.packages[2].name": "equalTo(\"PLATINUM\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(35.73)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(432.74)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(432.74)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(2.95)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(36.08)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(36.08)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(33.13)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(20)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId": "equalTo(25)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId": "equalTo(30)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"1,500 <br> per month\")",
+            "data.packages[1].quotation.premiumDetails.annualPremium.tax": "equalTo(55.01)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremium": "equalTo(611.21)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(666.22)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(666.22)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(611.21)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(611.21)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(611.21)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.tax": "equalTo(4.63)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(50.98)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(55.61)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(55.61)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(50.98)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(50.98)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(50.98)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(40)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"75,000\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].sequenceId": "equalTo(45)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"15,000\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].sequenceId": "equalTo(50)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"2,500 <br> per month\")",
+            "data.packages[2].quotation.premiumDetails.annualPremium.tax": "equalTo(74.29)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.basePremium": "equalTo(825.42)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(899.71)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(899.71)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(825.42)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(825.42)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(825.42)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.tax": "equalTo(6.2)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(68.73)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(74.93)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(74.93)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(68.73)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(68.73)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(68.73)",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(60)",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"100,000\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].sequenceId": "equalTo(65)",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"20,000\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].sequenceId": "equalTo(70)",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"3,500 <br> per month\")"
+          }
+        }
+      }
+    },
+
+    {
+      "Name": "Get quote - Cancer ",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": 1003,
+            "name": "Travel Insurance",
+            "category": "Travel",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobileNumber": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+
+          "data.quoteId":  "notNullValue()",
+          "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+          "data.preferences.currency": "equalTo(\"SGD\")",
+          "data.preferences.language": "equalTo(\"en\")",
+          "data.product.promoCode": "equalTo(0)",
+          "data.packages[0].name": "equalTo(\"SILVER\")",
+          "data.packages[0].id": "equalTo(\"P001\")",
+          "data.packages[0].description": "equalTo(\"Silver\")",
+          "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-11-30\")",
+          "data.packages[0].quotation.expiryDate": "equalTo(\"2026-11-30\")",
+          "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(13.42)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(149.16)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(162.58)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(149.16)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(149.16)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(149.16)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(149.16)",
+
+
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.1)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(12.43)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(13.53)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(12.43)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(12.43)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(12.43)",
+
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].sequenceId": "equalTo(90122)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].sequenceId": "equalTo(0)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].sequenceId": "equalTo(0)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD1,500 <br> per month\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(149.16)"
+        }
+      }
+    },
+
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+  },
+
+    {
+      "Name": "360F-purchase-notification",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+
+      "Request": {
+        "body": {
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-06-20T06:28:25.414Z",
+          "quoteId": "${quoteId}",
+          "promoCode": "CAN25D",
+          "productCode": "ALZ-SG-CAN-v001",
+          "payment": {
+            "method": "CASA",
+            "channel": "ibanking",
+            "ddlMandateNumber": "EI9496202504119693",
+            "externalReferenceNumber": "SGSCHHOME202504111204356",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "2429856470"
+            },
+            "status": "SUCCESS",
+            "externalTokenNumber": "ABC55566",
+            "amount": 120,
+            "dateTime": "2025-06-20T06:28:25.414Z",
+            "frequency": "Annual"
+          },
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.sessionId": "equalTo(\"3e85df9b-31dd-401c-943e-a652f588b911\")",
+            "data.portfolioId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"EFFECTIVE\")",
+            "data.policyExpiryDate": "equalTo(\"2026-11-29\")",
+            "data.policyEffectiveDate": "equalTo(\"2025-11-30\")"
+
+          }
+        }
+      }
+
+    }
+  ]
+    }

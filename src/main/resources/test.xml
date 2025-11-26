@@ -12,75 +12,219 @@
         </classes>
     </test>
 
-    <test name="Travel E2E">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Travel_E2E.json"/>
+<!--    <test name="Travel E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Travel_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Home E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Home_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Cyber E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Get Quote - Travel">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Get_Quote_Travel.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Purchase Notification - Travel">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Purchase_Notification_Travel.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Quick Quote - Home">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Quick_Quote.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Get Quote - Home">-->
+<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote_Home.json"/>-->
+<!--            <classes>-->
+<!--                <class name="org.example.SCB_E2E"/>-->
+<!--            </classes>-->
+
+<!--        </test>-->
+
+<!--    <test name="Purchase Notification - Home">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Purchase_Notification_Home.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Get Quote - Cyber ">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Get_Quote_Cyber.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Purchase Notification - Cyber ">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Purchase_Notification_Cyber.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+                      <!--  <SG products          >-->
+
+
+
+
+
+
+
+<!--    <test name="Travel E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel_SG/Travel_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Travel -Quick quote">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel_SG/360F_quote_SG_Travel_quickQuote.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Travel -Quick quote validate">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel_SG/360F_quote_SG_Travel_Quick_Quote_validate.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Travel -Get quote">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel_SG/360F_quote_SG_Travel_Get_Quote.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Travel - Purchase notification-SG">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel_SG/360F_quote_SG_Travel_Purchase_Notification.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+            <test name="Home -E2E">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home_SG/Home_E2E.json"/>
         <classes>
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
 
-    <test name="Home E2E">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Home_E2E.json"/>
+    <test name="Home -Quick quote">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home_SG/360F_quote_SG_Home_quickQuote.json"/>
         <classes>
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
 
-    <test name="Cyber E2E">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Cyber_E2E.json"/>
+    <test name="Home Quick Quote Validate - SG ">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home_SG/360F_quote_SG_Home_Quick_Quote_validate.json"/>
         <classes>
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
 
-
-    <test name="Get Quote - Travel">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Get_Quote_Travel.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
-
-    <test name="Purchase Notification - Travel">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Travel/Purchase_Notification_Travel.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
-
-    <test name="Quick Quote - Home">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Quick_Quote.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
-
-
-    <test name="Get Quote - Home">
-            <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Get_Quote_Home.json"/>
+            <test name="Home - Get quote">
+            <parameter name="testData" value="src/test/java/org/example/TestCases/Home_SG/360F_quote_SG_Home_Get_Quote.json"/>
             <classes>
                 <class name="org.example.SCB_E2E"/>
             </classes>
         </test>
 
-    <test name="Purchase Notification - Home">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Home/Purchase_Notification_Home.json"/>
+    <test name="Home Purchase Notification - SG ">
+        <parameter name="testData" value="src/test/java/org/example/TestCases/Home_SG/360F_quote_SG_Home_Purchase_Notification.json"/>
         <classes>
             <class name="org.example.SCB_E2E"/>
         </classes>
     </test>
 
-    <test name="Get Quote - Cyber ">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Get_Quote_Cyber.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
 
-    <test name="Purchase Notification - Cyber ">
-        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber/Purchase_Notification_Cyber.json"/>
-        <classes>
-            <class name="org.example.SCB_E2E"/>
-        </classes>
-    </test>
+<!--    <test name="Cyber E2E">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber_SG/Cyber_E2E.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Cyber - Quick Quote ">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber_SG/360F_quote_SG_Cyber_quickQuote.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Cyber - Get Quote ">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber_SG/360F_quote_SG_Cyber_Get_Quote.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name=" Cyber - Purchase Notification">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cyber_SG/360F_quote_SG_Cyber_Purchase_Notification.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--            <test name="Cancer E2E">-->
+<!--                    <parameter name="testData" value="src/test/java/org/example/TestCases/Cancer_SG/Cancer_E2E.json"/>-->
+<!--                    <classes>-->
+<!--                        <class name="org.example.SCB_E2E"/>-->
+<!--                    </classes>-->
+<!--                </test>-->
+
+<!--        <test name="Cancer - Quick quote">-->
+<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Cancer_SG/360F_quote_SG_Cancer_quickQuote.json"/>-->
+<!--            <classes>-->
+<!--                <class name="org.example.SCB_E2E"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="Cancer - get quote">-->
+<!--            <parameter name="testData" value="src/test/java/org/example/TestCases/Cancer_SG/360F_quote_SG_Cancer_getQuote.json"/>-->
+<!--            <classes>-->
+<!--                <class name="org.example.SCB_E2E"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+
+<!--    <test name="Cancer - Purchase Notification">-->
+<!--        <parameter name="testData" value="src/test/java/org/example/TestCases/Cancer_SG/360F_quote_SG_Cancer_Purchase_Notification.json"/>-->
+<!--        <classes>-->
+<!--            <class name="org.example.SCB_E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+
 </suite>
