@@ -1,0 +1,2633 @@
+{
+  "name": "360F_quote_SG_Travel_Get_Quote",
+  "Test": [
+
+    {
+      "Name": "Validate P001_Individual_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-20",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(506.4)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(723.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(217.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(723.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(217.05)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(217.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(723.6)"
+          }
+
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P001_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(354.36)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(506.24)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(151.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(506.24)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(151.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(151.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(506.24)"
+          }
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(364)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(519.96)"
+          }
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(385.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(551.21)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(165.33)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(551.21)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(165.33)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(165.33)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(551.21)"
+          }
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(222.22)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(317.48)"
+          }
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Individual_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(222.22)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(317.48)"
+          }
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(222.22)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(317.48)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(95.26)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(317.48)"
+          }
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(323.22)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(461.76)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(461.76)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(461.76)"
+          }
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Family_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(714.08)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(1020.09)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(306.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(1020.09)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(306.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(306.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(1020.09)"
+          }
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70416,
+                    "sequenceId": 6,
+                    "name": "Cruise Coverage",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Cruise Add-on",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Missed Port of Call</b><br>If your cruise skips or changes a scheduled stop, you're covered. Coverage amount: SGD 700. Coverage per port: SGD 100<br>\n<b>Cabin Confinement</b><br>If you're medically advised to stay in your cabin, get compensated. Coverage amount: SGD 70<br>\n<b>Low or High Water</b><br>If water levels affect your river cruise itinerary, you're covered. Coverage amount: SGD 70. Coverage per port: SGD 15<br>\n<b>Missed Shore Excursion(s)</b><br>If you miss prepaid excursion booked separately from your cruise package, you’re covered. Coverage amount: SGD 100\n<br><b>Denied Boarding</b><br>If you're denied boarding your cruise ship, we’ve got you covered. Coverage amount: SGD 1,000",
+                    "groupCoverageLimit": "",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 1.38,
+                      "annualPremiumBeforeDiscount": 16.6,
+                      "monthlyPremiumAfterDiscount": 0.42,
+                      "annualPremiumAfterDiscount": 4.98
+                    }
+                  }
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(323.22)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(461.76)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(461.76)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(138.54)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(461.76)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Group_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(311.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(445.16)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(692.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(988.84)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Group_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(471.72)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(673.92)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(673.92)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(673.92)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    }
+
+
+  ]
+}

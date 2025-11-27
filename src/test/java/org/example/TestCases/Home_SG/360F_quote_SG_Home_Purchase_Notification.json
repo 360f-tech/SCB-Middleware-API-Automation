@@ -1,0 +1,502 @@
+{
+  "name": "360F_quote_SG_Home_Purchase_Notification",
+  "Test": [
+
+    {
+      "Name": "Get quote for P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "personalDetails": {
+                "isAdult": true
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(0)",
+            "data.quoteId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+
+          }
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+    },
+
+    {
+      "Name": "Purchase notification - Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-08-18T04:05:49.728Z",
+            "frequency": "Yearly"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-06-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-HOM-v001",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+             "data.policyStatus": "equalTo(\"EFFECTIVE\")",
+             "data.policyEffectiveDate": "equalTo(\"2025-12-30\")",
+             "data.policyExpiryDate": "equalTo(\"2026-12-29\")"
+
+
+
+
+          }
+
+        }
+      }
+
+    },
+
+    {
+      "Name": "Get quote Home for P002",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "personalDetails": {
+                "isAdult": true
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(0)",
+            "data.quoteId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")"
+
+
+          }
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+    },
+
+    {
+      "Name": "Purchase notification - Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-08-18T04:05:49.728Z",
+            "frequency": "Yearly"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-06-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-HOM-v001",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"EFFECTIVE\")",
+            "data.policyEffectiveDate": "equalTo(\"2025-12-30\")",
+            "data.policyExpiryDate": "equalTo(\"2026-12-29\")"
+
+
+
+
+          }
+
+        }
+      }
+
+    },
+
+    {
+      "Name": "Get quote Home for P003",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "personalDetails": {
+                "isAdult": true
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(0)",
+            "data.quoteId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")"
+
+
+          }
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+    },
+
+    {
+      "Name": "Purchase notification - Home",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-08-18T04:05:49.728Z",
+            "frequency": "Yearly"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-06-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-HOM-v001",
+          "preferences": {
+            "currency": "HKD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.sessionId": "notNullValue()",
+            "data.policyNumber": "notNullValue()",
+            "data.policyStatus": "equalTo(\"EFFECTIVE\")",
+            "data.policyEffectiveDate": "equalTo(\"2025-12-30\")",
+            "data.policyExpiryDate": "equalTo(\"2026-12-29\")"
+
+
+
+
+          }
+
+        }
+      }
+
+    }
+
+
+
+  ]
+}

@@ -5,6 +5,7 @@
       "Name": "Get Token",
       "Method": "POST",
       "Endpoint": "/360-portcontrol/api/v1/auth/oauth2/token",
+
       "Request": {
         "body": {
           "client_id": "scbbanca@2025",

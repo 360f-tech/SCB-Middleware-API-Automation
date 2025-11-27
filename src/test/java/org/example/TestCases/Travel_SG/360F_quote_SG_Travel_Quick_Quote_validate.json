@@ -1,0 +1,1558 @@
+{
+  "name": "360F_quote_SG_Travel_Quick_Quote_validate",
+  "Test": [
+
+    {
+      "Name": "Validate P001_Individual_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(165.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(236.52)"
+          }
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(165.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(236.52)"
+          }
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(364)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(519.96)"
+          }
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(364)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(519.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(155.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(519.96)"
+          }
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P001_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Individual_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(311.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(445.16)"
+          }
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Family_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(692.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(988.84)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(311.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(445.16)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Group_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(311.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(445.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(133.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(445.16)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P003_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(692.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(988.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(296.64)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(988.84)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Group_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(210.6)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(300.88)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90.28)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(300.88)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate P002_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(471.72)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(673.92)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(673.92)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(202.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(673.92)"
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+      }
+
+
+    }
+
+
+  ]
+}

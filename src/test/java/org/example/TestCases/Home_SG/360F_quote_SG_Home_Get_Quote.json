@@ -1,0 +1,1878 @@
+{
+  "name": "360F_quote_SG_Home_Get_Quote",
+  "Test": [
+    {
+      "Name": "Validate with P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].quotation.issueDate": "equalTo(\"\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-11-30\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-11-30\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(90)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(8.1)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(90)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(98.1)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(90)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(90)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(90)",
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(7.5)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(0.62)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(7.5)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(8.12)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(7.5)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(7.5)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(7.5)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(60023)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Basic Sum Insured for Home Contents\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(90)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(7.5)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(60024)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Furniture and home appliances (per item)\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(60025)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Valuables (total value per event)\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].id": "equalTo(60026)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name": "equalTo(\"Money\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].id": "equalTo(99813)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name": "equalTo(\"Basic Sum Insured for Renovations\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].id": "equalTo(60036)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name": "equalTo(\"Worldwide Personal Liability\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].id": "equalTo(60052)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name": "equalTo(\"Accidental loss or Damage to Home Electronic Appliances\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].id": "equalTo(60038)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name": "equalTo(\"Loss or Damage of Personal Effects\")",
+
+            "data.insuredEntities.property.buildingLocation.postalCode": "equalTo(123456)",
+            "data.insuredEntities.property.buildingLocation.countryCode": "equalTo(\"SG\")",
+
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")"
+          }
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with P002",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+            "data.product.promoCode": "equalTo(0)",
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-11-30\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-11-30\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(168)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(15.12)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(168)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(168)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(168)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(141)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(183.12)",
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(14)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(14)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(14)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(14)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(11.75)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(15.26)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(60023)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Basic Sum Insured for Home Contents\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Loss or Damage to Home Contents\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(141)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(11.75)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(60024)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name":
+            "equalTo(\"Furniture and home appliances (per item)\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount":
+            "equalTo(141)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(11.75)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(60025)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name":
+            "equalTo(\"Valuables (total value per event)\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount":
+            "equalTo(141)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(11.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].id": "equalTo(60026)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name":
+            "equalTo(\"Money\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].premium.annualPremiumBeforeDiscount":
+            "equalTo(141)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(11.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].id": "equalTo(99813)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name":
+            "equalTo(\"Basic Sum Insured for Renovations\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].premium.annualPremiumBeforeDiscount":
+            "equalTo(141)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(11.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].id": "equalTo(60036)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name":
+            "equalTo(\"Worldwide Personal Liability\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName":
+            "equalTo(\"Worldwide Personal Liability\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].id": "equalTo(60052)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name":
+            "equalTo(\"Accidental loss or Damage to Home Electronic Appliances\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName":
+            "equalTo(\"Home Appliance Accidental Protection\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].premium.annualPremiumBeforeDiscount":
+            "equalTo(27)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(2.25)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].id": "equalTo(60038)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name":
+            "equalTo(\"Loss or Damage of Personal Effects\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName":
+            "equalTo(\"Worldwide All-Risk\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].id": "equalTo(70406)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name":
+            "equalTo(\"Additional Home Content Sum Insured\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName":
+            "equalTo(\"All Risks Home Content and Renovations\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].id": "equalTo(70407)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name":
+            "equalTo(\"Additional Renovations Sum Insured and Building Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName":
+            "equalTo(\"All Risks Home Content and Renovations\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)"
+          }
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with P003",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(0)",
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "notNullValue()",
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-11-30\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-11-30\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.policyContent": "notNullValue()",
+            "data.insuredEntities.property.buildingLocation.postalCode": "equalTo(123456)",
+            "data.insuredEntities.property.buildingLocation.countryCode": "equalTo(\"SG\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(302)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(27.18)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(302)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(302)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(302)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(251)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(329.18)",
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(25.17)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(2.32)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(25.17)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(25.17)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(25.17)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(20.88)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(27.49)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(60023)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name":
+            "equalTo(\"Basic Sum Insured for Home Contents\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount":
+            "equalTo(251)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(20.92)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(60024)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name":
+            "equalTo(\"Furniture and home appliances (per item)\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount":
+            "equalTo(251)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(20.92)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(60025)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name":
+            "equalTo(\"Valuables (total value per event)\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount":
+            "equalTo(251)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(20.92)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].id": "equalTo(60026)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].name":
+            "equalTo(\"Money\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].premium.annualPremiumBeforeDiscount":
+            "equalTo(251)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[3].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(20.92)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].id": "equalTo(99813)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].name":
+            "equalTo(\"Basic Sum Insured for Renovations\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].groupName":
+            "equalTo(\"Loss or Damage to Home Contents\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].premium.annualPremiumBeforeDiscount":
+            "equalTo(251)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[4].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(20.92)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].id": "equalTo(60036)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].name":
+            "equalTo(\"Worldwide Personal Liability\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].groupName":
+            "equalTo(\"Worldwide Personal Liability\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[5].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].id": "equalTo(60052)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].name":
+            "equalTo(\"Accidental loss or Damage to Home Electronic Appliances\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].groupName":
+            "equalTo(\"Home Appliance Accidental Protection\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].premium.annualPremiumBeforeDiscount":
+            "equalTo(51)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[6].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(4.25)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].id": "equalTo(60038)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].name":
+            "equalTo(\"Loss or Damage of Personal Effects\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].groupName":
+            "equalTo(\"Worldwide All-Risk\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[7].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].id": "equalTo(70406)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].name":
+            "equalTo(\"Additional Home Content Sum Insured\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].groupName":
+            "equalTo(\"All Risks Home Content and Renovations\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[8].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].id": "equalTo(70407)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].name":
+            "equalTo(\"Additional Renovations Sum Insured and Building Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].groupName":
+            "equalTo(\"All Risks Home Content and Renovations\")",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].premium.annualPremiumBeforeDiscount":
+            "equalTo(0)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[9].premium.monthlyPremiumBeforeDiscount":
+            "equalTo(0)"
+          }
+
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with HOME 5% for  P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME5%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator":{
+
+          }
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with HOME15%  for P002",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME15%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator":{
+
+          }
+
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with HOME20%  for P003",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME20%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 60052,
+                    "sequenceId": 31,
+                    "name": "Accidental loss or Damage to Home Electronic Appliances",
+                    "description": "",
+                    "information": "",
+                    "groupName": "Home Appliance Accidental Protection",
+                    "groupBenefitDescription": "",
+                    "groupCoverageLimit": "2,500",
+                    "isSelected": true,
+                    "isInbuilt": false,
+                    "coverageLimit": "<b>Coverage Amount : SGD 2,500 </b><br><br>\nAccidental loss or damage to Home Electronic Appliances such as:<br>\n1. Kitchen appliances: refrigerator, freezer, dishwasher, microwave oven, cooker hood and hob <br>2. Home appliances: television, audio equipment, air-conditioner, washer/dryer <br> 3. Personal appliance: tablets, laptops, computers <br> (Excess: SGD 100)",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 2.25,
+                      "annualPremiumBeforeDiscount": 27,
+                      "monthlyPremiumAfterDiscount": 2.11,
+                      "annualPremiumAfterDiscount": 25.65,
+                      "annualPremiumAfterDiscountAfterLevy": 25.65
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with add on 70406 and HOME20% for  P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME20%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70406,
+                    "sequenceId": 31,
+                    "name": "Additional Home Content Sum Insured",
+                    "description": "Increase sum insured of your home content such as movable possessions within the insured premises owned by you or your family.",
+                    "information": "nested",
+                    "groupName": "All Risks Home Content and Renovations",
+                    "groupBenefitDescription": "All Risk cover extends protection to sudden, accidental damage - not just fire or theft – for home contents including renovations.",
+                    "groupCoverageLimit": "50,000",
+                    "isSelected": false,
+                    "isInbuilt": false,
+                    "coverageLimit": "Top up additional coverage : SGD 50,000",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 7.92,
+                      "annualPremiumBeforeDiscount": 95,
+                      "monthlyPremiumAfterDiscount": 7.52,
+                      "annualPremiumAfterDiscount": 90.25,
+                      "annualPremiumAfterDiscountAfterLevy": 90.25
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with add on 70406 and HOME25% for  P002",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME25%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70406,
+                    "sequenceId": 31,
+                    "name": "Additional Home Content Sum Insured",
+                    "description": "Increase sum insured of your home content such as movable possessions within the insured premises owned by you or your family.",
+                    "information": "nested",
+                    "groupName": "All Risks Home Content and Renovations",
+                    "groupBenefitDescription": "All Risk cover extends protection to sudden, accidental damage - not just fire or theft – for home contents including renovations.",
+                    "groupCoverageLimit": "50,000",
+                    "isSelected": false,
+                    "isInbuilt": false,
+                    "coverageLimit": "Top up additional coverage : SGD 50,000",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 7.92,
+                      "annualPremiumBeforeDiscount": 95,
+                      "monthlyPremiumAfterDiscount": 7.52,
+                      "annualPremiumAfterDiscount": 90.25,
+                      "annualPremiumAfterDiscountAfterLevy": 90.25
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with add on 70406 and HOME15% for  P003",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME15%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70406,
+                    "sequenceId": 31,
+                    "name": "Additional Home Content Sum Insured",
+                    "description": "Increase sum insured of your home content such as movable possessions within the insured premises owned by you or your family.",
+                    "information": "nested",
+                    "groupName": "All Risks Home Content and Renovations",
+                    "groupBenefitDescription": "All Risk cover extends protection to sudden, accidental damage - not just fire or theft – for home contents including renovations.",
+                    "groupCoverageLimit": "50,000",
+                    "isSelected": false,
+                    "isInbuilt": false,
+                    "coverageLimit": "Top up additional coverage : SGD 50,000",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 7.92,
+                      "annualPremiumBeforeDiscount": 95,
+                      "monthlyPremiumAfterDiscount": 7.52,
+                      "annualPremiumAfterDiscount": 90.25,
+                      "annualPremiumAfterDiscountAfterLevy": 90.25
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+
+
+
+
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with 5 adults for P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-11-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": "HCSG",
+            "name": "",
+            "category": "",
+            "promoCode": "HOME15%",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZSG",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": null,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "F",
+                "mobile": "+6512345678",
+                "nationalIdType": "NRIC",
+                "occupation": "",
+                "nationalID": "S5727817Z",
+                "isSmoker": null,
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "test street",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "129588"
+                },
+                "isAdult": true,
+                "dob": "1980-12-12",
+                "title": "",
+                "firstName": "Judy",
+                "nationality": "SG",
+                "email": "judy@entsia.com",
+                "age": 31
+              }
+            }
+          ],
+          "timestamp": "2025-06-08T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "",
+            "planType": "SILVER",
+            "premiumTerm": null,
+            "premiumFrequency": "",
+            "paymentMethod": "",
+            "insuredEntities": {
+              "property": {
+                "bank": {
+                  "bankName": "",
+                  "bankBranch": "",
+                  "accountNumber": ""
+                },
+                "hasLoan": null,
+                "carpetArea": "",
+                "buildingAge": null,
+                "propertyType": "MRB",
+                "buildingLocation": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "",
+                  "city": "Singapore",
+                  "addressLine3": "",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                }
+              }
+            },
+            "sumAssured": null,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+                  {
+                    "id": 70406,
+                    "sequenceId": 31,
+                    "name": "Additional Home Content Sum Insured",
+                    "description": "Increase sum insured of your home content such as movable possessions within the insured premises owned by you or your family.",
+                    "information": "nested",
+                    "groupName": "All Risks Home Content and Renovations",
+                    "groupBenefitDescription": "All Risk cover extends protection to sudden, accidental damage - not just fire or theft – for home contents including renovations.",
+                    "groupCoverageLimit": "50,000",
+                    "isSelected": false,
+                    "isInbuilt": false,
+                    "coverageLimit": "Top up additional coverage : SGD 50,000",
+                    "premium": {
+                      "monthlyPremiumBeforeDiscount": 7.92,
+                      "annualPremiumBeforeDiscount": 95,
+                      "monthlyPremiumAfterDiscount": 7.52,
+                      "annualPremiumAfterDiscount": 90.25,
+                      "annualPremiumAfterDiscountAfterLevy": 90.25
+                    }
+                  }
+
+                ]
+              }
+            ],
+            "deductible": 0,
+            "preferences": {
+              "currency": "",
+              "language": ""
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-HOM-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+
+
+
+
+        }
+      }
+
+
+
+
+    }
+
+
+  ]
+}

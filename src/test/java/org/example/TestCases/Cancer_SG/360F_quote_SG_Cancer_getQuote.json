@@ -1,0 +1,2711 @@
+{
+  "name": "360F-quote SG Cancer, getQuote",
+  "Test": [
+
+    {
+      "Name": "Validate with P001",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].description": "equalTo(\"Silver\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(13.42)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(162.58)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.1)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(13.53)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(12.43)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD1,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(149.16)"
+
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate with P002",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P002",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+            "data.packages[0].description": "equalTo(\"Gold\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(20.79)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(251.82)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.76)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(21.04)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(19.28)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"75,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"15,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD2,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(231.03)"
+
+          }
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate with P003",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P003",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response":  {
+      "statusCode": 200,
+      "validator": {
+        "body_validator": {
+
+          "data.quoteId": "notNullValue()",
+          "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+          "data.preferences.currency": "equalTo(\"SGD\")",
+          "data.preferences.language": "equalTo(\"en\")",
+
+
+          "data.packages[0].id": "equalTo(\"P003\")",
+          "data.packages[0].name": "equalTo(\"PLATINUM\")",
+          "data.packages[0].description": "equalTo(\"Platinum\")",
+          "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+          "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+          "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(28.06)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(311.78)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(339.84)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(311.78)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(311.78)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(311.78)",
+          "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(311.78)",
+
+
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(2.32)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(26)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(28.32)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(26)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(26)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(26)",
+          "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(26)",
+
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"100,000\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(311.78)",
+
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"20,000\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(311.78)",
+
+
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD3,500 <br> per month\")",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+          "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(311.78)"
+
+
+        }
+      }
+    }
+
+
+
+    },
+
+    {
+      "Name": "Validate with P001 with Promo code CAN25D",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "id": 1003,
+            "promoCode": "CAN25D",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+            "data.quoteId": "notNullValue()",
+            "data.product.promoCode": "equalTo(\"CAN25D\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].description": "equalTo(\"Silver\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(10.07)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(37.29)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(121.94)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(111.87)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(0.83)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(3.08)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(10.18)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(9.35)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(12.43)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(111.87)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(9.35)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(111.87)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(9.35)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD1,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(111.87)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(9.35)"
+
+
+          }
+        }
+      }
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with P002 with Promo code CAN25D",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P002",
+          "product": {
+            "id": 1003,
+            "promoCode": "CAN25D",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+            "data.product.promoCode": "equalTo(\"CAN25D\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+            "data.packages[0].description": "equalTo(\"Gold\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(15.59)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(57.76)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(188.86)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(173.27)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.29)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(4.85)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(15.72)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(14.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(19.28)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"75,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(173.27)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(14.43)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"15,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(173.27)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(14.43)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD2,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(173.27)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(14.43)"
+
+
+          }
+        }
+      }
+
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with P003 with Promo code CAN25D",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body":{
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "id": 1003,
+            "promoCode": "CAN25D",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+            "data.quoteId": "notNullValue()",
+            "data.product.promoCode": "equalTo(\"CAN25D\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+            "data.packages[0].description": "equalTo(\"Platinum\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(21.05)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(77.94)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(254.89)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(233.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(311.78)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.8)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(6.55)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(21.25)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(19.45)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(26)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"100,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(233.84)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(19.45)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"20,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(233.84)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(19.45)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD3,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(233.84)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(19.45)"
+
+
+          }
+        }
+      }
+
+
+
+
+
+
+    },
+
+    {
+      "Name": "Validate with P001 and NRIC",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].description": "equalTo(\"Silver\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(13.42)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(162.58)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.1)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(13.53)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(12.43)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(149.16)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD1,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(149.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(12.43)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(149.16)"
+
+
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate with P002 and NRIC",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P002",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].id": "equalTo(\"P002\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+            "data.packages[0].description": "equalTo(\"Gold\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(20.79)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(251.82)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.76)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(21.04)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(19.28)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"75,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"15,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(231.03)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD2,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(231.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(19.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(231.03)"
+
+          }
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate with P003 and FIN/ NRIC",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P003",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response":  {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")",
+            "data.packages[0].description": "equalTo(\"Platinum\")",
+            "data.packages[0].quotation.expiryDate": "equalTo(\"2026-12-30\")",
+            "data.packages[0].quotation.effectiveDate": "equalTo(\"2025-12-30\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(28.06)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(339.84)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(311.78)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(2.32)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(28.32)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(26)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(26)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(\"89815\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"100,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(311.78)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(\"89816\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Non Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"20,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(311.78)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(\"89817\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD3,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(311.78)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(26)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(311.78)"
+
+
+          }
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate with P001 without policy holders and insured persons",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": null,
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Validate with P002 without policy holders and insured persons",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P002",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+
+
+          }
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Validate with P003 without policy holders and insured persons",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P003",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response":  {
+        "statusCode": 400,
+        "validator": {
+          "body_validator": {
+
+
+
+          }
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate with P003 with 20 insured persons",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC/FIN",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "deductible": 200,
+            "policyTerm": 25,
+            "sumAssured": 500,
+            "preferences": {
+              "currency": "HKD",
+              "language": "en"
+            },
+            "paymentMethod": "CreditCard",
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC/FIN",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+
+      "Response":  {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+
+      "data.packages[0].id": "equalTo(\"P001\")",
+      "data.packages[0].name": "equalTo(\"SILVER\")",
+
+      "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(13.42)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+
+      "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(149.16)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(162.58)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(149.16)",
+
+      "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(149.16)",
+
+      "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(149.16)",
+      "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(149.16)",
+
+
+
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.1)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(12.43)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(13.53)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(12.43)",
+
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(12.43)",
+
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(12.43)",
+      "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(12.43)"
+
+
+
+          }
+        }
+      }
+
+
+
+    }
+  ]
+}

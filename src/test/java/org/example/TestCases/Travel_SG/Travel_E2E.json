@@ -1,0 +1,805 @@
+{
+  "name": "Travel E2E",
+  "Test": [
+
+    {
+      "Name": "Quick Quote - Travel",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-12-05",
+          "selectedPackageId": "",
+          "product": {
+            "id": 1003,
+            "promoCode": "",
+            "referralCode": "",
+            "userSpecificDiscountFlag": false
+          },
+          "insuranceCompanyCode": "ALZHK",
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "LEGAL",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-CAN-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c\")",
+            "data.preferences.currency": "equalTo(\"SGD\")",
+            "data.preferences.language": "equalTo(\"en\")",
+
+
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(35.73)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(432.74)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(432.74)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(397.01)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(397.01)",
+
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(2.95)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(36.08)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(36.08)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(33.13)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(33.13)",
+
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"50,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(397.01)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(33.13)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"10,000\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(611.21)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"1,500 <br> per month\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(825.42)",
+
+
+            "data.packages[1].name": "equalTo(\"GOLD\")",
+            "data.packages[1].id": "equalTo(\"P002\")",
+
+
+            "data.packages[1].quotation.premiumDetails.annualPremium.tax": "equalTo(55.01)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremium": "equalTo(611.21)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(666.22)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(666.22)",
+
+
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.tax": "equalTo(4.63)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(50.98)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(55.61)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(55.61)",
+
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"75,000\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(611.21)",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"15,000\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(611.21)",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"2,500 <br> per month\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(611.21)",
+
+
+            "data.packages[2].name": "equalTo(\"PLATINUM\")",
+            "data.packages[2].id": "equalTo(\"P003\")",
+
+
+            "data.packages[2].quotation.premiumDetails.annualPremium.tax": "equalTo(74.29)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.basePremium": "equalTo(825.42)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(899.71)",
+            "data.packages[2].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(899.71)",
+
+
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.tax": "equalTo(6.2)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(68.73)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(74.93)",
+            "data.packages[2].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(74.93)",
+
+
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Major Cancer Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"100,000\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(825.42)",
+
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Non-Invasive Cancer Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"20,000\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(825.42)",
+
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Monthly Income Benefit\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"3,500 <br> per month\")",
+            "data.packages[2].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(825.42)"
+
+
+          }
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Travel - Quick quote Validate",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2026-01-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-12-30",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"SCBTOKYO70\")",
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(165.56)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(236.52)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(70.96)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(236.52)"
+          }
+
+
+
+
+        }
+      }
+
+
+    },
+
+    {
+      "Name": "Travel - Get quote",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(231.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(330.4)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(99.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(330.4)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(99.12)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(99.2)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(330.4)"
+
+          }
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+
+      }
+
+
+
+    },
+
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    }
+  ]
+}

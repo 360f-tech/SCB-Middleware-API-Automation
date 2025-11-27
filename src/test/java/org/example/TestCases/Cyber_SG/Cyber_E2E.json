@@ -1,0 +1,375 @@
+{
+  "name": "Cyber E2E",
+  "Test": [
+
+    {
+      "Name": "Quick Quote - Cyber",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "policyEffectiveDate": "2025-12-27",
+          "product": {
+            "promoCode": ""
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "productCode": "ALZ-SG-CYB-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.product.promoCode": "equalTo(0)",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(8.91)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(107.91)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(99)",
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(0.66)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(8.25)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(8.91)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(8.25)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(8.25)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(8.25)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(8.25)",
+
+            "data.packages[1].quotation.premiumDetails.annualPremium.tax": "equalTo(17.83)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.loading": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.discount": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.policyFee": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremium": "equalTo(198)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(215.83)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.premiumAfterFee": "equalTo(198)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(198)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(198)",
+            "data.packages[1].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(198)",
+
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.tax": "equalTo(1.55)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.loading": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.policyFee": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(16.39)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(17.94)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.premiumAfterFee": "equalTo(16.39)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.totalRiderPremium": "equalTo(0)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(16.39)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(16.39)",
+            "data.packages[1].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(16.39)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(70411)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Fraudulent Transaction Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].description": "equalTo(\"Covers Financial Loss due to Fraudulent Transactions\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Banking Protection\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"25,000\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(6.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(74.25)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(6.16)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(74.25)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(70412)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Insured Object Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].description": "equalTo(\"Repair, replace or reimbursement for the cost of repair of the Insured Object\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Shopping Protection\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"500 <br> per event, <br> 1 time per policy year\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(2.09)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(24.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(2.09)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(24.75)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(70413)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Delivery Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].description": "equalTo(\"Reimbursement for the delivery or return shipment costs of the Insured Object\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Shopping Protection (Shipping)\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"150 <br> per event, <br> 1 time per policy year\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(2.09)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(24.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(2.09)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(24.75)",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(70411)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Fraudulent Transaction Coverage\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].description": "equalTo(\"Covers Financial Loss due to Fraudulent Transactions\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Banking Protection\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"60,000\")",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(12.32)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(148.5)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(12.32)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(148.5)",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(70412)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Insured Object Coverage\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].description": "equalTo(\"Repair, replace or reimbursement for the cost of repair of the Insured Object\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Shopping Protection\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"500 <br> per event, <br> 3 times per policy year\")",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(4.07)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(49.5)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(4.07)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(49.5)",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(70413)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Delivery Coverage\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].description": "equalTo(\"Reimbursement for the delivery or return shipment costs of the Insured Object\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Shopping Protection (Shipping)\")",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"150 <br> per event, <br> 3 times per policy year\")",
+
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(4.07)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(49.5)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(4.07)",
+            "data.packages[1].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(49.5)"
+          }
+        }
+      }
+
+    },
+
+    {
+      "Name": "Get quote - Cyber ",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+
+      "Request": {
+        "body": {
+          "channel": "MBNK",
+          "productCode": "ALZ-SG-CYB-v001",
+          "policyEffectiveDate": "2025-12-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "CYBER10",
+            "userSpecificDiscountFlag": false
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "mobile": 99882233,
+                "nationalID": "S8550859H",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "Blk 123 Street Name",
+                  "addressLine2": "Building 5",
+                  "city": "Singapore",
+                  "addressLine3": "Unit 09-88",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "123456"
+                },
+                "isAdult": true,
+                "dob": "1991-01-26",
+                "title": "MR",
+                "firstName": "CpAdult",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "insuredPersons": [
+              {
+                "otherBenefits": null,
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "mobile": "99882233",
+                  "nationalId": "S8550859H",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "Blk 123 Street Name",
+                    "addressLine2": "Building 5",
+                    "city": "Singapore",
+                    "addressLine3": "Unit 09-88",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "123456"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-26",
+                  "title": "MR",
+                  "firstName": "CpAdult",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+            ],
+            "insuredEntities": null,
+            "premiumFrequency": "Annual"
+          },
+          "quoteId": "",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": ""}
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.product.promoCode": "equalTo(\"CYBER10\")",
+            "data.sessionId": "equalTo(\"4a79bbd0-48ae-4ab7-8c66-5f365ff695c4\")",
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"GOLD\")",
+
+            "data.packages[0].quotation.premiumDetails.annualPremium.tax": "equalTo(8.02)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.discount": "equalTo(9.9)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremium": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.premiumPayable": "equalTo(97.12)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumAfterDiscount": "equalTo(97.12)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.totalPremiumBeforeDiscount": "equalTo(99)",
+            "data.packages[0].quotation.premiumDetails.annualPremium.basePremiumPostDeductible": "equalTo(89.1)",
+
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.tax": "equalTo(0.65)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.discount": "equalTo(0.83)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremium": "equalTo(8.2)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.premiumPayable": "equalTo(8.02)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumAfterDiscount": "equalTo(8.02)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.totalPremiumBeforeDiscount": "equalTo(8.2)",
+            "data.packages[0].quotation.premiumDetails.monthlyPremium.basePremiumPostDeductible": "equalTo(7.37)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].id": "equalTo(70411)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].name": "equalTo(\"Fraudulent Transaction Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].groupName": "equalTo(\"Banking Protection\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].coverageLimit": "equalTo(\"25,000\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumBeforeDiscount": "equalTo(74.25)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.annualPremiumAfterDiscount": "equalTo(66.82)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumBeforeDiscount": "equalTo(6.17)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[0].premium.monthlyPremiumAfterDiscount": "equalTo(5.55)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].id": "equalTo(70412)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].name": "equalTo(\"Insured Object Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].groupName": "equalTo(\"Shopping Protection\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].coverageLimit": "equalTo(\"SGD 500 <br> per event, <br> 1 time per policy year\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumBeforeDiscount": "equalTo(24.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.annualPremiumAfterDiscount": "equalTo(22.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumBeforeDiscount": "equalTo(2.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[1].premium.monthlyPremiumAfterDiscount": "equalTo(1.82)",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].id": "equalTo(70413)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].name": "equalTo(\"Delivery Coverage\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].groupName": "equalTo(\"Shopping Protection\")",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].coverageLimit": "equalTo(\"SGD 150 <br> per event, <br> 1 time per policy year\")",
+
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumBeforeDiscount": "equalTo(24.75)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.annualPremiumAfterDiscount": "equalTo(22.28)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumBeforeDiscount": "equalTo(2.03)",
+            "data.packages[0].quotation.insuredPersons[0].otherBenefits[2].premium.monthlyPremiumAfterDiscount": "equalTo(1.82)"
+          }
+        }
+      },
+
+
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+    },
+
+    {
+      "Name": "360F-purchase-notification- Cyber",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-08-18T04:05:49.728Z",
+            "frequency": "Yearly"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          },
+          "productCode": "ALZ-SG-CYB-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.sessionId": "equalTo(\"3e85df9b-31dd-401c-943e-a652f588b911\")",
+            "data.policyNumber":  "equalTo(\"${quoteId}\")",
+            "data.policyStatus": "equalTo(\"EFFECTIVE\")",
+            "data.policyExpiryDate": "equalTo(\"2026-12-29\")",
+            "data.policyEffectiveDate": "equalTo(\"2025-12-30\")"
+          }
+        }
+      }
+
+
+    }
+  ]
+}

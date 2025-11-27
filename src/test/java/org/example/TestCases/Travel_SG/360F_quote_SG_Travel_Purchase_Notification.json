@@ -1,0 +1,3176 @@
+{
+  "name": "360F_quote_SG_Travel_Purchase_Notification",
+  "Test": [
+
+    {
+      "Name": "Validate P001_Individual_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.quoteId": "notNullValue()",
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+          }
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P001_Individual_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": ""
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+
+          }
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteIds}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteIds}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithoutAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": ""
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+
+          }
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P001_Family_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 2,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+
+          }
+
+
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P001_Group_WithAddOn",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P001",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 3,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P001\")",
+            "data.packages[0].name": "equalTo(\"SILVER\")"
+
+
+          }
+
+
+
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P003_Individual_Promocode",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": "SCBTOKYO70"
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")"
+          }
+
+
+
+
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    },
+
+    {
+      "Name": "Validate P003_Individual_Without_Promocode",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/quote",
+      "Request": {
+        "body": {
+          "channel": "IBNK",
+          "policyEffectiveDate": "2025-10-30",
+          "selectedPackageId": "P003",
+          "product": {
+            "promoCode": ""
+          },
+          "sessionId": "4a79bbd0-48ae-4ab7-8c66-5f365ff695c4",
+          "policyHolders": [
+            {
+              "policyHolderId": 1,
+              "personalDetails": {
+                "preferredContactMethod": "email",
+                "lastName": "Test",
+                "gender": "M",
+                "mobile": 99882233,
+                "nationalIdType": "NRIC",
+                "occupation": "Engineer",
+                "nationalID": "S9379849Z",
+                "residentialAddress": {
+                  "countryCode": "SG",
+                  "addressLine1": "L1",
+                  "addressLine2": "L2",
+                  "city": "Singapore",
+                  "addressLine3": "L3",
+                  "area": "",
+                  "district": "",
+                  "country": "Singapore",
+                  "postalCode": "467489"
+                },
+                "isAdult": true,
+                "dob": "1991-01-24",
+                "title": "MR",
+                "firstName": "TravelJour",
+                "nationality": "SG",
+                "email": "test@allianz.com",
+                "age": 29
+              }
+            }
+          ],
+          "timestamp": "2025-07-18T00:00:00.000Z",
+          "quotationDetails": {
+            "coverageType": "Family",
+            "planType": "Basic",
+            "premiumTerm": 4,
+            "premiumFrequency": "Annual",
+            "paymentMethod": "CreditCard",
+            "insuredEntities": {
+              "travel": {
+                "tripInfo": {
+                  "travelPurpose": 1,
+                  "destinations": [
+                    {
+                      "location": "ASEAN"
+                    }
+                  ],
+                  "bookingDate": "2025-06-08T00:00:00.000Z",
+                  "endDate": "2025-11-30",
+                  "numberOfTravelers": 2,
+                  "startDate": "2025-11-29",
+                  "countryOfOrigin": "HK",
+                  "destinationPlace": 6,
+                  "tripType": "Single"
+                }
+              }
+            },
+            "sumAssured": 500,
+            "insuredPersons": [
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              },
+              {
+                "otherBenefits": [
+
+                ],
+                "underWritings": null,
+                "insuredPersonId": 1,
+                "personalDetails": {
+                  "preferredContactMethod": "email",
+                  "lastName": "Test",
+                  "gender": "M",
+                  "mobile": "99882233",
+                  "nationalIdType": "NRIC",
+                  "occupation": "Engineer",
+                  "nationalId": "S9379849Z",
+                  "isSmoker": true,
+                  "residentialAddress": {
+                    "countryCode": "SG",
+                    "addressLine1": "L1",
+                    "addressLine2": "L2",
+                    "city": "Singapore",
+                    "addressLine3": "L3",
+                    "area": "",
+                    "district": "",
+                    "country": "Singapore",
+                    "postalCode": "467489"
+                  },
+                  "isAdult": true,
+                  "dob": "1991-01-24",
+                  "title": "MR",
+                  "firstName": "TravelJour",
+                  "nationality": "SG",
+                  "email": "test@allianz.com",
+                  "age": 31
+                },
+                "isMainPolicyHolder": true
+              }
+
+
+            ],
+            "deductible": 200,
+            "preferences": {
+              "currency": "SGD",
+              "language": "en"
+            },
+            "policyTerm": 25
+          },
+          "quoteId": "187d9f3b-6f36-48f9-a9da-f07681ec8b92",
+          "consents": [
+            {
+              "consentType": "SERVICING",
+              "hasAccepted": true
+            },
+            {
+              "consentType": "MARKETING",
+              "hasAccepted": true
+            }
+          ],
+          "quoteRequestReferenceNo": "",
+          "productCode": "ALZ-SG-TRV-v001"
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+            "data.quoteId": "notNullValue()",
+
+
+            "data.packages[0].id": "equalTo(\"P003\")",
+            "data.packages[0].name": "equalTo(\"PLATINUM\")"
+          }
+
+
+
+
+
+
+
+
+        }
+      },
+      "Extract": {
+        "${quoteId}": "data.quoteId"
+      }
+
+
+    },
+    {
+      "Name": "Purchase notification - SG",
+      "Method": "POST",
+      "Endpoint": "/360-scb/api/v1/purchase-notification",
+      "Request": {
+        "body": {
+          "payment": {
+            "method": "CASA",
+            "channel": "Mobile",
+            "ddlMandateNumber": "89788437228856",
+            "externalReferenceNumber": "33333422367346",
+            "paymentSessionId": "ABC55566",
+            "bankAccount": {
+              "accountName": "Name Umbrella",
+              "accountNumber": "3345257782322"
+            },
+            "status": "accepted",
+            "externalTokenNumber": "ABC55566",
+            "amount": 183.12,
+            "dateTime": "2025-11-18T04:05:49.728Z",
+            "frequency": "Annual"
+          },
+          "quoteId": "${quoteId}",
+          "promoCode": "",
+          "sessionId": "3e85df9b-31dd-401c-943e-a652f588b911",
+          "timestamp": "2025-08-20T06:28:25.414Z",
+          "productCode": "ALZ-SG-TRV-v001",
+          "preferences": {
+            "currency": "SGD",
+            "language": "en"
+          },
+          "quotationDetails": {
+            "effectiveDate": ""
+          }
+        }
+      },
+      "Response": {
+        "statusCode": 200,
+        "validator": {
+          "body_validator": {
+
+          }
+
+
+        }
+      }
+
+
+
+    }
+
+
+
+
+  ]
+}
